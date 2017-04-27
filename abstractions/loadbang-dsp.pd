@@ -1,0 +1,8 @@
+#N canvas 410 241 431 238 10;
+#X obj 19 11 loadbang;
+#X obj 19 33 delay 100;
+#X msg 19 54 \; pd dsp 1;
+#X text 94 29 delayed auto-enabling of pd dsp \, useful for raspberry
+pi non-gui.;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;

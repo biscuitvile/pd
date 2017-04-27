@@ -1,0 +1,158 @@
+#N canvas 89 54 868 486 10;
+#X obj 379 8 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X text 397 6 rec;
+#X obj 474 8 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 361 47 hip~ 5;
+#X obj 405 46 hip~ 5;
+#X obj 13 172 dac~;
+#X obj 13 149 hip~ 5;
+#X obj 57 150 hip~ 5;
+#X obj 12 34 adc~;
+#X obj 33 58 s~ inputRight;
+#X obj 12 78 s~ inputLeft;
+#X obj 13 107 r~ inputLeft;
+#X obj 57 128 r~ inputRight;
+#X obj 212 7 r~ inputLeft;
+#X obj 292 7 r~ inputRight;
+#X obj 424 8 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 442 6 stop;
+#X obj 11 4 loadbang-dsp;
+#X obj 524 8 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 542 6 reset;
+#X text 493 7 play;
+#X obj 361 25 looper~;
+#X obj 361 69 dac~;
+#X obj 379 93 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 397 91 rec;
+#X obj 474 93 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 361 132 hip~ 5;
+#X obj 405 131 hip~ 5;
+#X obj 212 92 r~ inputLeft;
+#X obj 292 92 r~ inputRight;
+#X obj 424 93 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 442 91 stop;
+#X obj 524 93 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 542 91 reset;
+#X text 493 92 play;
+#X obj 361 110 looper~;
+#X obj 361 154 dac~;
+#X obj 379 177 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 397 175 rec;
+#X obj 474 177 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 361 216 hip~ 5;
+#X obj 405 215 hip~ 5;
+#X obj 212 176 r~ inputLeft;
+#X obj 292 176 r~ inputRight;
+#X obj 424 177 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 442 175 stop;
+#X obj 524 177 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 542 175 reset;
+#X text 493 176 play;
+#X obj 361 194 looper~;
+#X obj 361 238 dac~;
+#X obj 379 262 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 397 260 rec;
+#X obj 474 262 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 361 301 hip~ 5;
+#X obj 405 300 hip~ 5;
+#X obj 212 261 r~ inputLeft;
+#X obj 292 261 r~ inputRight;
+#X obj 424 262 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 442 260 stop;
+#X obj 524 262 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 542 260 reset;
+#X text 493 261 play;
+#X obj 361 279 looper~;
+#X obj 361 323 dac~;
+#X obj 379 346 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 397 344 rec;
+#X obj 474 346 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 361 385 hip~ 5;
+#X obj 405 384 hip~ 5;
+#X obj 212 345 r~ inputLeft;
+#X obj 292 345 r~ inputRight;
+#X obj 424 346 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 442 344 stop;
+#X obj 524 346 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 542 344 reset;
+#X text 493 345 play;
+#X obj 361 363 looper~;
+#X obj 361 407 dac~;
+#X text 614 10 5 track looping deck \, first usage of pd abstractions.
+;
+#X connect 0 0 21 2;
+#X connect 2 0 21 4;
+#X connect 3 0 22 0;
+#X connect 4 0 22 1;
+#X connect 6 0 5 0;
+#X connect 7 0 5 1;
+#X connect 8 0 10 0;
+#X connect 8 1 9 0;
+#X connect 11 0 6 0;
+#X connect 12 0 7 0;
+#X connect 13 0 21 0;
+#X connect 14 0 21 1;
+#X connect 15 0 21 3;
+#X connect 18 0 21 5;
+#X connect 21 0 3 0;
+#X connect 21 1 4 0;
+#X connect 23 0 35 2;
+#X connect 25 0 35 4;
+#X connect 26 0 36 0;
+#X connect 27 0 36 1;
+#X connect 28 0 35 0;
+#X connect 29 0 35 1;
+#X connect 30 0 35 3;
+#X connect 32 0 35 5;
+#X connect 35 0 26 0;
+#X connect 35 1 27 0;
+#X connect 37 0 49 2;
+#X connect 39 0 49 4;
+#X connect 40 0 50 0;
+#X connect 41 0 50 1;
+#X connect 42 0 49 0;
+#X connect 43 0 49 1;
+#X connect 44 0 49 3;
+#X connect 46 0 49 5;
+#X connect 49 0 40 0;
+#X connect 49 1 41 0;
+#X connect 51 0 63 2;
+#X connect 53 0 63 4;
+#X connect 54 0 64 0;
+#X connect 55 0 64 1;
+#X connect 56 0 63 0;
+#X connect 57 0 63 1;
+#X connect 58 0 63 3;
+#X connect 60 0 63 5;
+#X connect 63 0 54 0;
+#X connect 63 1 55 0;
+#X connect 65 0 77 2;
+#X connect 67 0 77 4;
+#X connect 68 0 78 0;
+#X connect 69 0 78 1;
+#X connect 70 0 77 0;
+#X connect 71 0 77 1;
+#X connect 72 0 77 3;
+#X connect 74 0 77 5;
+#X connect 77 0 68 0;
+#X connect 77 1 69 0;
