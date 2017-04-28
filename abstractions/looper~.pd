@@ -1,56 +1,61 @@
-#N canvas 409 144 1011 688 10;
-#X obj 40 88 +~;
+#N canvas 385 262 1011 688 10;
+#X obj 40 278 +~;
 #X obj 39 416 *~;
 #X obj 40 469 *~ 0.5;
 #X obj 103 389 line~;
 #X obj 103 360 pack 0 6;
 #X msg 103 317 0;
 #X msg 143 329 1;
-#X msg 485 77 reset;
-#X msg 434 464 bang;
-#X msg 484 464 stop;
-#X obj 527 521 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X msg 559 66 reset;
+#X msg 508 453 bang;
+#X msg 558 453 stop;
+#X obj 601 510 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 319 323 timer;
 #X obj 319 355 * 44.1;
 #X floatatom 319 384 5 0 0 0 - - -;
 #X msg 319 409 resize \$1;
-#X msg 531 387 normalize;
+#X msg 605 376 normalize;
 #X obj 337 277 t b b b;
-#X msg 512 421 resize 3.969e+06 \, const 0;
+#X msg 586 410 resize 3.969e+06 \, const 0;
 #X msg 373 95 0;
 #X obj 270 116 f;
 #X obj 257 155 + 1;
 #X msg 372 117 2;
 #X obj 297 136 sel 0 1 2 3;
 #X obj 230 133 sel 3;
-#X text 519 464 stop playback;
-#X text 527 77 clear loop;
-#X obj 270 58 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X text 593 453 stop playback;
+#X text 601 66 clear loop;
+#X obj 4 22 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
 #X msg 270 93 bang;
-#X text 288 56 rec;
-#X text 572 173 functional \, unlimited overdubbing looper. there is
+#X text 22 20 rec;
+#X text 646 162 functional \, unlimited overdubbing looper. there is
 still an unfortunate quirk however: you can't seem to overdub during
 the very first playback of the first loop \, the overdubs do not record
 in this scenario.;
-#X obj 10 34 inlet~;
-#X obj 55 35 inlet~;
-#X obj 270 32 inlet;
-#X obj 423 585 outlet~;
-#X obj 475 585 outlet~;
-#X text 529 586 is this really even stereo? may need two tables for
+#X obj 10 224 inlet~;
+#X obj 55 225 inlet~;
+#X obj 497 574 outlet~;
+#X obj 549 574 outlet~;
+#X text 603 575 is this really even stereo? may need two tables for
 that.;
-#X obj 724 77 table \$0-loop 3.969e+06;
+#X obj 798 66 table \$0-loop 3.969e+06;
 #X obj 40 563 tabwrite~ \$0-loop;
-#X obj 434 498 tabplay~ \$0-loop;
+#X obj 508 487 tabplay~ \$0-loop;
 #X obj 319 438 s \$0-loop;
-#X obj 396 36 inlet;
-#X obj 445 36 inlet;
-#X obj 492 36 inlet;
+#X obj 4 44 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 22 43 clear;
+#X obj 65 23 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 84 22 stop;
+#X obj 66 45 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 84 45 play;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
-#X connect 2 0 37 0;
+#X connect 2 0 36 0;
 #X connect 3 0 1 1;
 #X connect 4 0 3 0;
 #X connect 5 0 4 0;
@@ -58,18 +63,18 @@ that.;
 #X connect 7 0 18 0;
 #X connect 7 0 9 0;
 #X connect 7 0 17 0;
-#X connect 8 0 38 0;
-#X connect 9 0 38 0;
+#X connect 8 0 37 0;
+#X connect 9 0 37 0;
 #X connect 10 0 8 0;
 #X connect 11 0 12 0;
 #X connect 12 0 13 0;
 #X connect 13 0 14 0;
-#X connect 14 0 39 0;
-#X connect 15 0 39 0;
+#X connect 14 0 38 0;
+#X connect 15 0 38 0;
 #X connect 16 0 5 0;
 #X connect 16 1 8 0;
 #X connect 16 2 11 1;
-#X connect 17 0 39 0;
+#X connect 17 0 38 0;
 #X connect 18 0 19 1;
 #X connect 19 0 23 0;
 #X connect 19 0 22 0;
@@ -77,7 +82,7 @@ that.;
 #X connect 21 0 19 1;
 #X connect 22 0 11 0;
 #X connect 22 0 6 0;
-#X connect 22 0 37 0;
+#X connect 22 0 36 0;
 #X connect 22 1 16 0;
 #X connect 22 1 5 0;
 #X connect 22 2 6 0;
@@ -88,12 +93,12 @@ that.;
 #X connect 27 0 19 0;
 #X connect 30 0 0 0;
 #X connect 31 0 0 1;
-#X connect 32 0 26 0;
-#X connect 38 0 33 0;
-#X connect 38 0 34 0;
-#X connect 38 0 37 0;
-#X connect 38 1 10 0;
-#X connect 38 1 37 0;
-#X connect 40 0 9 0;
-#X connect 41 0 8 0;
-#X connect 42 0 7 0;
+#X connect 37 0 32 0;
+#X connect 37 0 33 0;
+#X connect 37 0 36 0;
+#X connect 37 1 10 0;
+#X connect 37 1 36 0;
+#X connect 39 0 7 0;
+#X connect 41 0 9 0;
+#X connect 43 0 8 0;
+#X coords 0 -1 1 1 115 65 1 0 0;
