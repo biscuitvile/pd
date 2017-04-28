@@ -26,10 +26,10 @@
 #X obj 230 133 sel 3;
 #X text 593 453 stop playback;
 #X text 601 66 clear loop;
-#X obj 4 22 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 7 22 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
 #X msg 270 93 bang;
-#X text 22 20 rec;
+#X text 25 20 rec;
 #X text 646 162 functional \, unlimited overdubbing looper. there is
 still an unfortunate quirk however: you can't seem to overdub during
 the very first playback of the first loop \, the overdubs do not record
@@ -44,15 +44,15 @@ that.;
 #X obj 40 563 tabwrite~ \$0-loop;
 #X obj 508 487 tabplay~ \$0-loop;
 #X obj 319 438 s \$0-loop;
-#X obj 4 44 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 7 44 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X text 22 43 clear;
-#X obj 65 23 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X text 25 43 clear;
+#X obj 68 23 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X text 84 22 stop;
-#X obj 66 45 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X text 87 22 stop;
+#X obj 69 45 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X text 84 45 play;
+#X text 87 45 play;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 36 0;
@@ -101,4 +101,4 @@ that.;
 #X connect 39 0 7 0;
 #X connect 41 0 9 0;
 #X connect 43 0 8 0;
-#X coords 0 -1 1 1 115 65 1 0 0;
+#X coords 0 -1 1 1 120 65 1 0 0;
