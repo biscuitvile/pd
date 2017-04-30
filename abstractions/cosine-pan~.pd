@@ -14,10 +14,11 @@
 #X text 37 272 cosine panner from Andy Farnell's book "Designing Sound"
 ;
 #X obj 110 130 hsl 100 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 4950 1;
+-1 -1 5000 1;
 #X obj 197 112 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X msg 146 55 0.5;
+#X obj 197 8 loadbang;
 #X connect 0 0 1 0;
 #X connect 2 0 0 0;
 #X connect 2 0 10 0;
@@ -33,4 +34,5 @@
 #X connect 13 0 3 0;
 #X connect 14 0 15 0;
 #X connect 15 0 13 0;
+#X connect 16 0 14 0;
 #X coords 0 -1 1 1 120 50 1 100 100;
