@@ -1,10 +1,10 @@
 #N canvas 1281 282 760 477 10;
 #X obj 110 128 hsl 100 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 9900 1;
+-1 -1 0 1;
 #X obj 110 149 hsl 100 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
 #X obj 110 170 hsl 100 15 0 7000 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2500 1;
+-1 -1 0 1;
 #X obj 110 190 hsl 100 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
 #X obj 197 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
@@ -14,7 +14,6 @@
 #X text 111 169 length;
 #X text 111 188 feedback;
 #X obj 184 285 sig~;
-#X obj 256 295 *~ 0.6;
 #X obj 184 304 lop~ 1;
 #X obj 184 323 vd~ \$0-delay;
 #X obj 330 118 inlet~;
@@ -30,29 +29,34 @@
 #X floatatom 62 123 5 0 0 0 - - -;
 #X obj 229 142 sel 0;
 #X obj 62 142 sel 1;
-#X connect 0 0 16 1;
-#X connect 1 0 15 1;
+#X obj 256 295 *~ 0;
+#X obj 196 13 loadbang;
+#X msg 196 37 0;
+#X connect 0 0 15 1;
+#X connect 1 0 14 1;
 #X connect 2 0 9 0;
-#X connect 3 0 10 1;
+#X connect 3 0 25 1;
+#X connect 4 0 21 0;
 #X connect 4 0 22 0;
-#X connect 4 0 23 0;
-#X connect 9 0 11 0;
-#X connect 10 0 17 0;
-#X connect 11 0 12 0;
-#X connect 12 0 10 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 11 0 15 0;
+#X connect 11 0 25 0;
+#X connect 12 0 14 0;
 #X connect 12 0 16 0;
-#X connect 13 0 15 0;
-#X connect 13 0 17 0;
-#X connect 15 0 14 0;
-#X connect 16 0 14 0;
-#X connect 18 0 0 0;
+#X connect 14 0 13 0;
+#X connect 15 0 13 0;
+#X connect 17 0 0 0;
+#X connect 18 0 1 0;
 #X connect 19 0 1 0;
-#X connect 20 0 1 0;
-#X connect 21 0 0 0;
+#X connect 20 0 0 0;
+#X connect 21 0 23 0;
 #X connect 22 0 24 0;
-#X connect 23 0 25 0;
-#X connect 24 0 18 0;
+#X connect 23 0 17 0;
+#X connect 23 0 18 0;
 #X connect 24 0 19 0;
-#X connect 25 0 20 0;
-#X connect 25 0 21 0;
+#X connect 24 0 20 0;
+#X connect 25 0 16 0;
+#X connect 26 0 27 0;
+#X connect 27 0 4 0;
 #X coords 0 -1 1 1 120 110 1 100 100;
