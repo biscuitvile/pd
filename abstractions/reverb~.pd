@@ -7,7 +7,7 @@
 #X obj 110 128 hsl 100 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
 #X obj 110 149 hsl 100 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 9900 1;
 #X obj 110 170 hsl 100 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
 #X obj 110 190 hsl 100 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
@@ -24,6 +24,12 @@
 #X msg 345 325 bypass \$1;
 #X obj 425 111 loadbang;
 #X msg 425 131 1;
+#X obj 193 20 inlet midi-on;
+#X obj 194 45 == 127;
+#X obj 289 20 inlet midi-wet;
+#X obj 290 43 / 127;
+#X obj 386 43 / 127;
+#X obj 385 20 inlet midi-size;
 #X connect 0 0 16 0;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
@@ -40,4 +46,10 @@
 #X connect 18 0 19 0;
 #X connect 19 0 17 0;
 #X connect 19 0 6 0;
+#X connect 20 0 21 0;
+#X connect 21 0 9 0;
+#X connect 22 0 23 0;
+#X connect 23 0 5 0;
+#X connect 24 0 7 0;
+#X connect 25 0 24 0;
 #X coords 0 -1 1 1 120 110 1 100 100;

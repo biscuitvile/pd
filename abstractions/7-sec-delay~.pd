@@ -1,12 +1,12 @@
 #N canvas 1281 282 760 477 10;
 #X obj 110 128 hsl 100 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 7600 1;
+-1 -1 5301 1;
 #X obj 110 149 hsl 100 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 9900 1;
 #X obj 110 170 hsl 100 15 0 7000 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 100 1;
+-1 -1 0 1;
 #X obj 110 190 hsl 100 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 3000 1;
+-1 -1 3586 1;
 #X text 108 126 wet;
 #X text 109 147 dry;
 #X text 111 169 length;
@@ -25,6 +25,19 @@
 #X msg 107 41 0;
 #X obj 197 108 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
+#X obj 387 10 inlet midi-wet;
+#X obj 479 10 inlet midi-length;
+#X obj 590 11 inlet midi-feedback;
+#X obj 648 47 inlet midi-reset;
+#X obj 649 73 == 127;
+#X obj 590 33 / 127;
+#X obj 479 33 / 127;
+#X obj 387 32 / 127;
+#X floatatom 466 146 5 0 0 0 - - -;
+#X obj 526 113 * 7000;
+#X floatatom 530 85 5 0 0 0 - - -;
+#X floatatom 484 90 5 0 0 0 - - -;
+#X obj 479 60 moses 0.9;
 #X connect 0 0 14 1;
 #X connect 1 0 13 1;
 #X connect 2 0 8 0;
@@ -46,4 +59,18 @@
 #X connect 19 0 3 0;
 #X connect 20 0 19 0;
 #X connect 20 0 18 0;
+#X connect 21 0 28 0;
+#X connect 22 0 27 0;
+#X connect 23 0 26 0;
+#X connect 24 0 25 0;
+#X connect 25 0 20 0;
+#X connect 26 0 3 0;
+#X connect 27 0 33 0;
+#X connect 28 0 0 0;
+#X connect 29 0 2 0;
+#X connect 30 0 29 0;
+#X connect 31 0 30 0;
+#X connect 32 0 30 0;
+#X connect 33 0 32 0;
+#X connect 33 1 31 0;
 #X coords 0 -1 1 1 120 110 1 100 100;
