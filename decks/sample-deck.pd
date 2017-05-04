@@ -23,6 +23,9 @@
 #X msg 66 154 symbol A_06;
 #X msg 156 154 symbol A_07;
 #X msg 246 154 symbol A_08;
+#X obj 325 47 loadbang;
+#X obj 325 139 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X connect 0 0 1 0;
 #X connect 2 0 1 1;
 #X connect 6 0 3 0;
@@ -39,3 +42,12 @@
 #X connect 21 0 13 1;
 #X connect 22 0 14 1;
 #X connect 23 0 15 1;
+#X connect 24 0 11 0;
+#X connect 24 0 10 0;
+#X connect 24 0 9 0;
+#X connect 24 0 2 0;
+#X connect 24 0 25 0;
+#X connect 25 0 23 0;
+#X connect 25 0 22 0;
+#X connect 25 0 21 0;
+#X connect 25 0 20 0;
