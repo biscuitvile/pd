@@ -49,7 +49,7 @@ in this scenario.;
 #X text 87 45 play;
 #X obj 47 219 s~ \$0-monitor;
 #X obj 553 550 r~ \$0-monitor;
-#X obj 97 4 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 127
+#X obj 97 4 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
 #X obj 318 8 inlet midi-monitor;
 #X obj 224 8 inlet midi-rec;
@@ -61,7 +61,8 @@ in this scenario.;
 #X msg 734 578 1;
 #X obj 553 598 *~ 0;
 #X msg 771 577 0;
-#X obj 731 550 sel 127;
+#X floatatom 730 528 5 0 0 0 - - -;
+#X obj 731 550 sel 1;
 #X connect 0 0 49 0;
 #X connect 1 0 0 1;
 #X connect 2 0 1 0;
@@ -119,6 +120,7 @@ in this scenario.;
 #X connect 50 0 51 1;
 #X connect 51 0 29 0;
 #X connect 52 0 51 1;
-#X connect 53 0 50 0;
-#X connect 53 1 52 0;
+#X connect 53 0 54 0;
+#X connect 54 0 50 0;
+#X connect 54 1 52 0;
 #X coords 0 -1 1 1 120 65 1 0 0;
