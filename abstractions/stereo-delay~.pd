@@ -1,12 +1,12 @@
-#N canvas 1036 130 899 596 10;
+#N canvas 1208 175 899 596 10;
 #X obj 50 210 hsl 100 15 0 1 0 0 \$0-wet \$0-midi-wet empty -2 -8 0
-10 -262144 -1 -1 9200 1;
+10 -262144 -1 -1 0 1;
 #X obj 50 231 hsl 100 15 0 1 0 0 \$0-dry empty empty -2 -8 0 10 -262144
 -1 -1 9900 1;
-#X obj 50 252 hsl 100 15 0 7000 0 0 \$0-length \$0-midi-length empty
--2 -8 0 10 -262144 -1 -1 1200 1;
+#X obj 50 252 hsl 100 15 0 4000 0 0 \$0-length \$0-midi-length empty
+-2 -8 0 10 -262144 -1 -1 0 1;
 #X obj 50 272 hsl 100 15 0 1 0 0 \$0-feedback \$0-midi-feedback empty
--2 -8 0 10 -262144 -1 -1 6200 1;
+-2 -8 0 10 -262144 -1 -1 0 1;
 #X text 48 208 wet;
 #X text 49 229 dry;
 #X text 51 251 length;
@@ -41,7 +41,7 @@
 #X obj 329 29 / 127;
 #X obj 237 29 / 127;
 #X obj 236 49 s \$0-midi-wet;
-#X obj 329 49 s \$0-midi-length;
+#X obj 329 67 s \$0-midi-length;
 #X obj 440 50 s \$0-midi-feedback;
 #X obj 563 11 inlet midi-reset;
 #X obj 563 30 == 127;
@@ -64,6 +64,7 @@
 #X obj 672 303 delwrite~ \$0-delay-right 4000;
 #X obj 524 441 s~ \$0-outlet-right;
 #X obj 524 393 vd~ \$0-delay-right;
+#X obj 329 48 * 4000;
 #X connect 8 0 9 0;
 #X connect 9 0 26 0;
 #X connect 10 0 28 0;
@@ -90,7 +91,7 @@
 #X connect 31 0 34 0;
 #X connect 32 0 33 0;
 #X connect 33 0 38 0;
-#X connect 34 0 37 0;
+#X connect 34 0 60 0;
 #X connect 35 0 36 0;
 #X connect 39 0 40 0;
 #X connect 40 0 41 0;
@@ -112,4 +113,5 @@
 #X connect 56 0 57 0;
 #X connect 59 0 50 0;
 #X connect 59 0 51 0;
+#X connect 60 0 37 0;
 #X coords 0 -1 1 1 120 115 1 40 180;
