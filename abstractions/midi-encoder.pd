@@ -1,0 +1,18 @@
+#N canvas 636 160 450 300 10;
+#X obj 101 -135 ctlin;
+#X obj 134 -60 &&;
+#X obj 101 -38 spigot;
+#X obj 101 -5 outlet;
+#X obj 134 -89 ==;
+#X obj 171 -157 inlet encoder;
+#X obj 260 -157 inlet channel;
+#X obj 172 -89 == 1;
+#X connect 0 0 2 0;
+#X connect 0 1 4 0;
+#X connect 0 2 7 0;
+#X connect 1 0 2 1;
+#X connect 2 0 3 0;
+#X connect 4 0 1 0;
+#X connect 5 0 4 1;
+#X connect 6 0 7 1;
+#X connect 7 0 1 1;

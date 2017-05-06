@@ -1,0 +1,4 @@
+#N canvas 1450 404 450 300 10;
+#X obj 61 33 adc~;
+#X obj 61 64 channel-strip~ 0;
+#X connect 0 0 1 0;
