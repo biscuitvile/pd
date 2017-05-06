@@ -1,4 +1,4 @@
-#N canvas 140 52 1061 1076 10;
+#N canvas 1056 59 1061 1076 10;
 #X obj 401 424 cosine-pan~;
 #X obj 401 479 channel-out~;
 #X obj 401 309 reverb~;
@@ -47,8 +47,10 @@
 #X obj 47 62 s \$0-base;
 #X obj 47 15 loadbang;
 #X obj 47 39 f \$1;
+#X obj 548 462 + 13;
+#X obj 548 442 r \$0-base;
 #X connect 0 0 1 0;
-#X connect 0 1 1 3;
+#X connect 0 1 1 4;
 #X connect 2 0 0 0;
 #X connect 3 0 2 0;
 #X connect 4 0 3 0;
@@ -94,4 +96,6 @@
 #X connect 44 0 24 0;
 #X connect 46 0 47 0;
 #X connect 47 0 45 0;
+#X connect 48 0 1 3;
+#X connect 49 0 48 0;
 #X coords 0 -1 1 1 122 440 1 400 100;
