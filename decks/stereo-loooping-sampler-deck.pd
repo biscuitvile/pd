@@ -1,11 +1,11 @@
 #N canvas 524 180 1726 816 10;
 #X obj 21 14 loadbang-dsp;
 #X obj 49 77 cosine-pan~;
-#X obj 49 568 channel-out~;
+#X obj 49 566 channel-out~;
 #X obj 100 131 ctlin 0 2;
 #X obj 50 152 ctlin 1 2;
-#X obj 109 549 ctlin 13 1;
-#X obj 44 549 ctlin 13 2;
+#X obj 109 547 ctlin 13 1;
+#X obj 44 547 ctlin 13 2;
 #X obj 104 60 ctlin 12 1;
 #X obj 49 419 ctlin 8 2;
 #X obj 49 401 ctlin 8 1;
@@ -16,7 +16,7 @@
 #X obj 112 263 ctlin 5 2;
 #X obj 110 152 ctlin 12 2;
 #X obj 179 77 cosine-pan~;
-#X obj 179 568 channel-out~;
+#X obj 179 566 channel-out~;
 #X obj 230 131 ctlin 2 2;
 #X obj 179 150 ctlin 3 2;
 #X obj 240 152 ctlin 14 2;
@@ -28,12 +28,12 @@
 #X obj 179 417 ctlin 10 2;
 #X obj 239 417 ctlin 11 1;
 #X obj 234 59 ctlin 14 1;
-#X obj 174 550 ctlin 15 2;
-#X obj 239 550 ctlin 15 1;
+#X obj 174 548 ctlin 15 2;
+#X obj 239 548 ctlin 15 1;
 #X obj 309 77 cosine-pan~;
-#X obj 309 568 channel-out~;
+#X obj 309 566 channel-out~;
 #X obj 439 77 cosine-pan~;
-#X obj 439 568 channel-out~;
+#X obj 439 566 channel-out~;
 #X obj 360 131 ctlin 16 2;
 #X obj 309 150 ctlin 17 2;
 #X obj 370 152 ctlin 28 2;
@@ -45,8 +45,8 @@
 #X obj 309 417 ctlin 24 2;
 #X obj 369 417 ctlin 25 1;
 #X obj 364 59 ctlin 28 1;
-#X obj 304 550 ctlin 29 2;
-#X obj 369 550 ctlin 29 1;
+#X obj 304 548 ctlin 29 2;
+#X obj 369 548 ctlin 29 1;
 #X obj 490 131 ctlin 18 2;
 #X obj 439 150 ctlin 19 2;
 #X obj 500 152 ctlin 30 2;
@@ -58,12 +58,12 @@
 #X obj 439 417 ctlin 26 2;
 #X obj 499 417 ctlin 27 1;
 #X obj 494 59 ctlin 30 1;
-#X obj 434 550 ctlin 31 2;
-#X obj 499 550 ctlin 31 1;
+#X obj 434 548 ctlin 31 2;
+#X obj 499 548 ctlin 31 1;
 #X obj 569 77 cosine-pan~;
-#X obj 569 568 channel-out~;
+#X obj 569 566 channel-out~;
 #X obj 699 77 cosine-pan~;
-#X obj 699 568 channel-out~;
+#X obj 699 566 channel-out~;
 #X obj 620 131 ctlin 32 2;
 #X obj 569 150 ctlin 33 2;
 #X obj 630 152 ctlin 44 2;
@@ -75,8 +75,8 @@
 #X obj 569 417 ctlin 40 2;
 #X obj 629 417 ctlin 41 1;
 #X obj 624 59 ctlin 44 1;
-#X obj 564 550 ctlin 45 2;
-#X obj 629 550 ctlin 45 1;
+#X obj 564 548 ctlin 45 2;
+#X obj 629 548 ctlin 45 1;
 #X obj 750 131 ctlin 34 2;
 #X obj 699 150 ctlin 35 2;
 #X obj 760 152 ctlin 46 2;
@@ -88,8 +88,8 @@
 #X obj 699 417 ctlin 42 2;
 #X obj 759 417 ctlin 43 1;
 #X obj 754 59 ctlin 46 1;
-#X obj 694 550 ctlin 47 2;
-#X obj 759 550 ctlin 47 1;
+#X obj 694 548 ctlin 47 2;
+#X obj 759 548 ctlin 47 1;
 #X obj 983 81 ctlin 48 2;
 #X obj 1073 81 ctlin 49 2;
 #X obj 1163 81 ctlin 50 2;
@@ -110,7 +110,7 @@
 #X obj 1338 351 *~ 1;
 #X obj 1338 150 *~ 1;
 #X obj 1371 167 cosine-pan~;
-#X obj 1371 570 channel-out~;
+#X obj 1371 571 channel-out~;
 #X obj 1496 203 makenote 127 1;
 #X msg 1496 183 127;
 #X obj 1496 162 loadbang;
@@ -126,7 +126,7 @@
 #X obj 1561 327 ctlin 49 1;
 #X obj 1627 327 ctlin 50 1;
 #X obj 844 266 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 12700 1;
+-1 -1 0 1;
 #X msg 841 346 A_05 A_06 A_07 A_08;
 #X msg 841 365 B_05 B_06 B_07 B_08;
 #X obj 841 305 sel 0 32 64 96 127;
@@ -142,7 +142,7 @@
 #X msg 841 384 C_05 C_06 C_07 C_08;
 #X msg 841 403 D_05 D_06 D_07 D_08;
 #X obj 844 65 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 12700 1;
+-1 -1 0 1;
 #X obj 841 104 sel 0 32 64 96 127;
 #X obj 841 109 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -351,17 +351,17 @@
 #X connect 150 0 170 0;
 #X connect 150 1 170 5;
 #X connect 151 0 2 0;
-#X connect 151 1 2 3;
+#X connect 151 1 2 4;
 #X connect 152 0 17 0;
-#X connect 152 1 17 3;
+#X connect 152 1 17 4;
 #X connect 153 0 32 0;
-#X connect 153 1 32 3;
+#X connect 153 1 32 4;
 #X connect 154 0 34 0;
-#X connect 154 1 34 3;
+#X connect 154 1 34 4;
 #X connect 155 0 62 0;
-#X connect 155 1 62 3;
+#X connect 155 1 62 4;
 #X connect 156 0 64 0;
-#X connect 156 1 64 3;
+#X connect 156 1 64 4;
 #X connect 157 0 1 0;
 #X connect 158 0 16 0;
 #X connect 159 0 31 0;
@@ -369,7 +369,7 @@
 #X connect 161 0 61 0;
 #X connect 162 0 63 0;
 #X connect 163 0 111 0;
-#X connect 163 1 111 3;
+#X connect 163 1 111 4;
 #X connect 164 0 171 0;
 #X connect 164 1 171 5;
 #X connect 165 0 172 0;
