@@ -1,4 +1,4 @@
-#N canvas 971 148 997 782 10;
+#N canvas 91 49 1047 829 10;
 #X obj 61 48 adc~;
 #X obj 61 81 +~;
 #X obj 60 379 *~;
@@ -26,8 +26,8 @@
 #X obj 317 111 sel 0 1 2 3;
 #X obj 250 108 sel 3;
 #X text 547 52 clear loop;
-#X obj 290 33 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
+#X obj 290 33 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+127;
 #X msg 290 68 bang;
 #X text 308 31 rec;
 #X obj 258 389 s sampleSize;
@@ -41,7 +41,6 @@
 #X obj 734 413 tabread4~ loop;
 #X obj 732 262 r sampleSize;
 #X floatatom 811 321 12 0 0 0 - - -;
-#X obj 723 504 dac~;
 #X floatatom 764 446 5 0 0 0 - - -;
 #X obj 732 285 expr 44100 / $f1;
 #X obj 440 418 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -60,6 +59,18 @@
 possiblities for sonic fun \, but in this version there are serious
 timing issues not present in the previous version that uses tabplay~
 exclusivley. still pretty good for noisy or abstract loops.;
+#X obj 519 297 midi-encoder;
+#X obj 518 266 f 0;
+#X obj 545 341 / 127;
+#X obj 546 435 midi-encoder;
+#X obj 572 479 / 127;
+#X obj 500 359 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 577 519 * 1000;
+#X obj 546 404 f 1;
+#X obj 436 224 f 0;
+#X obj 434 259 midi-toggle;
+#X obj 827 559 channel-strip~;
 #X connect 0 0 1 0;
 #X connect 0 0 11 0;
 #X connect 0 1 1 1;
@@ -73,17 +84,17 @@ exclusivley. still pretty good for noisy or abstract loops.;
 #X connect 8 0 6 0;
 #X connect 9 0 20 0;
 #X connect 9 0 18 0;
-#X connect 9 0 45 0;
+#X connect 9 0 44 0;
 #X connect 10 0 4 0;
 #X connect 10 1 4 0;
-#X connect 10 1 44 0;
+#X connect 10 1 43 0;
 #X connect 12 0 13 0;
 #X connect 13 0 14 0;
 #X connect 13 0 31 0;
 #X connect 14 0 15 0;
 #X connect 16 0 32 0;
 #X connect 17 0 7 0;
-#X connect 17 1 44 0;
+#X connect 17 1 43 0;
 #X connect 17 2 12 1;
 #X connect 18 0 34 0;
 #X connect 20 0 21 1;
@@ -106,14 +117,25 @@ exclusivley. still pretty good for noisy or abstract loops.;
 #X connect 35 0 36 0;
 #X connect 36 0 38 0;
 #X connect 37 0 36 1;
-#X connect 38 0 53 0;
-#X connect 39 0 43 0;
-#X connect 42 0 53 1;
-#X connect 43 0 40 0;
-#X connect 43 0 35 0;
-#X connect 44 0 10 0;
-#X connect 45 0 46 0;
-#X connect 47 0 35 0;
-#X connect 48 0 43 0;
-#X connect 53 0 41 0;
-#X connect 53 0 41 1;
+#X connect 38 0 52 0;
+#X connect 39 0 42 0;
+#X connect 41 0 52 1;
+#X connect 42 0 40 0;
+#X connect 42 0 35 0;
+#X connect 43 0 10 0;
+#X connect 44 0 45 0;
+#X connect 46 0 35 0;
+#X connect 47 0 42 0;
+#X connect 52 0 64 0;
+#X connect 54 0 56 0;
+#X connect 55 0 54 0;
+#X connect 56 0 46 0;
+#X connect 57 0 58 0;
+#X connect 58 0 60 0;
+#X connect 59 0 55 0;
+#X connect 59 0 61 0;
+#X connect 59 0 62 0;
+#X connect 60 0 46 0;
+#X connect 61 0 57 0;
+#X connect 62 0 63 0;
+#X connect 63 0 27 0;
