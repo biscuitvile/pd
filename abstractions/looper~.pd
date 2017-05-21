@@ -1,4 +1,4 @@
-#N canvas 311 34 1129 855 10;
+#N canvas 437 23 1129 855 10;
 #X obj 39 416 *~;
 #X obj 103 389 line~;
 #X obj 103 360 pack 0 6;
@@ -98,8 +98,16 @@ in this scenario.;
 #X obj 49 23 bng 15 250 50 0 \$0-save empty empty 17 7 0 10 -262144
 -1 -1;
 #X msg 244 688 write -wave ../audio/\$2.wav \$1-loop;
-#X text 302 92;
+#X text 302 92 comment;
 #X symbolatom 29 3 10 0 0 0 - - #0-track-number;
+#X obj 483 670 r \$0-track-number;
+#X obj 483 739 pack f s;
+#X obj 483 695 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 483 716 f \$0;
+#X obj 528 710 r \$0-track-number;
+#X obj 483 785 soundfiler;
+#X msg 483 763 read -resize ../audio/\$2.wav \$1-loop;
 #X connect 0 0 48 0;
 #X connect 1 0 0 1;
 #X connect 2 0 1 0;
@@ -178,4 +186,10 @@ in this scenario.;
 #X connect 81 0 82 1;
 #X connect 82 0 85 0;
 #X connect 85 0 83 0;
+#X connect 88 0 90 0;
+#X connect 89 0 94 0;
+#X connect 90 0 91 0;
+#X connect 91 0 89 0;
+#X connect 92 0 89 1;
+#X connect 94 0 93 0;
 #X coords 0 -1 1 1 120 65 1 0 0;
