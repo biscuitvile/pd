@@ -1,4 +1,4 @@
-#N canvas 514 53 1061 1076 10;
+#N canvas 327 39 1061 1076 10;
 #X obj 401 424 cosine-pan~;
 #X obj 401 479 channel-out~;
 #X obj 401 309 reverb~;
@@ -52,7 +52,8 @@
 #X obj 742 103 + 0;
 #X obj 401 193 audio-delay~ 4000;
 #X msg 818 103 symbol \$1;
-#X obj 818 17 inlet file;
+#X obj 818 81 inlet file;
+#X obj 895 103 inlet save;
 #X connect 0 0 1 0;
 #X connect 0 1 1 4;
 #X connect 2 0 0 0;
@@ -106,4 +107,5 @@
 #X connect 51 0 2 0;
 #X connect 52 0 3 5;
 #X connect 53 0 52 0;
+#X connect 54 0 3 6;
 #X coords 0 -1 1 1 122 440 1 400 100;
