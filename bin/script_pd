@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# This script starts Pd in non-gui mode,
+# after waiting to set the alsmixer line
+# in on and in capture mode. Can probably
+# work around this aspect by learning more
+# about the .asoundrc file.
+
+echo "Waiting to work around alsamixer boot defaults..."
+sleep 10s
+
+echo "Enabling alsamixer audio in..."
+sudo amixer -c 0 sset Line,0 100%, 100% unmute cap
+
+sleep 2s
+
+echo "Starting Pd..."
+
+pd -nogui -midiindev 1 /home/pi/pd/decks/init-deck.pd &

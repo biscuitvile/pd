@@ -1,2 +1,6 @@
 *.mp4
 samples/*
+.DS_STORE
+vendor/*
+audio/*
+
