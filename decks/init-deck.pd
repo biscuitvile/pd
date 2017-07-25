@@ -1,23 +1,24 @@
-#N canvas 2 153 450 300 10;
-#X obj 90 130 osc~;
-#X obj 52 30 loadbang;
-#X msg 51 94 50;
-#X obj 51 6 loadbang-dsp;
-#X obj 93 88 midi-encoder;
-#X msg 97 66 0;
-#X obj 96 109 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 3700 1;
-#X msg 174 67 1;
-#X obj 75 233 channel-out~;
-#X obj 248 139 loadbang;
-#X msg 248 175 50;
-#X obj 289 197 midi-encoder;
-#X obj 292 218 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 11000 1;
-#X msg 370 176 1;
-#X msg 293 175 1;
-#X connect 0 0 8 4;
+#N canvas 258 627 769 508 10;
+#X obj 215 159 osc~;
+#X obj 177 59 loadbang;
+#X msg 176 123 50;
+#X obj 176 35 loadbang-dsp;
+#X obj 218 117 midi-encoder;
+#X msg 222 95 0;
+#X obj 221 138 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 8300 1;
+#X msg 299 96 1;
+#X obj 200 262 channel-out~;
+#X obj 373 168 loadbang;
+#X msg 373 204 50;
+#X obj 414 226 midi-encoder;
+#X obj 417 247 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 2900 1;
+#X msg 495 205 1;
+#X msg 418 204 1;
+#X obj 78 245 adc~;
 #X connect 0 0 8 0;
+#X connect 0 0 8 4;
 #X connect 1 0 2 0;
 #X connect 1 0 5 0;
 #X connect 1 0 7 0;
@@ -34,3 +35,5 @@
 #X connect 11 0 8 2;
 #X connect 13 0 11 1;
 #X connect 14 0 11 0;
+#X connect 15 0 8 0;
+#X connect 15 0 8 4;
