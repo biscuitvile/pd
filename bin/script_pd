@@ -16,4 +16,4 @@ sleep 2s
 
 echo "Starting Pd..."
 
-pd -nogui -midiindev 1 /home/pi/pd/decks/looper-sampler-deck.pd &
+pd -nogui -midiindev 1 /home/pi/pd/decks/init-deck.pd &
