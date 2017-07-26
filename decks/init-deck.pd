@@ -1,4 +1,4 @@
-#N canvas 616 63 1848 1048 10;
+#N canvas 642 47 1848 1048 10;
 #X obj 68 21 loadbang-dsp;
 #X obj 66 879 channel-out~;
 #X obj 66 162 adc~;
@@ -40,6 +40,12 @@
 #X obj 459 625 midi-encoder 11 1;
 #X obj 459 761 midi-encoder 14 1;
 #X obj 402 852 midi-encoder 15 1;
+#X msg 191 308 127;
+#X msg 200 913 65;
+#X obj 191 288 r defaults;
+#X obj 200 893 r defaults;
+#X obj 183 39 s defaults;
+#X obj 183 19 loadbang;
 #X connect 2 0 8 0;
 #X connect 3 0 1 0;
 #X connect 3 1 1 4;
@@ -80,3 +86,8 @@
 #X connect 38 0 24 3;
 #X connect 39 0 23 1;
 #X connect 40 0 21 2;
+#X connect 41 0 8 4;
+#X connect 42 0 1 2;
+#X connect 43 0 41 0;
+#X connect 44 0 42 0;
+#X connect 46 0 45 0;
