@@ -44,8 +44,8 @@
 #X msg 200 913 65;
 #X obj 191 288 r defaults;
 #X obj 200 893 r defaults;
-#X obj 183 39 s defaults;
-#X obj 183 19 loadbang;
+#X obj 68 43 s defaults;
+#X connect 0 0 45 0;
 #X connect 2 0 8 0;
 #X connect 3 0 1 0;
 #X connect 3 1 1 4;
@@ -90,4 +90,3 @@
 #X connect 42 0 1 2;
 #X connect 43 0 41 0;
 #X connect 44 0 42 0;
-#X connect 46 0 45 0;
