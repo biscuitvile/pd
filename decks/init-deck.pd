@@ -1,4 +1,4 @@
-#N canvas 676 110 1285 679 10;
+#N canvas 876 203 1367 949 10;
 #X obj 257 417 osc~;
 #X obj 219 317 loadbang;
 #X msg 218 381 50;
@@ -6,14 +6,14 @@
 #X obj 260 375 midi-encoder;
 #X msg 264 353 0;
 #X obj 263 396 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 4000 1;
+-1 -1 6200 1;
 #X msg 341 354 1;
 #X obj 254 678 channel-out~;
 #X obj 577 622 loadbang;
 #X msg 577 658 50;
 #X obj 618 680 midi-encoder;
 #X obj 621 701 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 11000 1;
+-1 -1 0 1;
 #X msg 699 659 1;
 #X msg 622 658 1;
 #X obj 442 148 adc~;
@@ -21,7 +21,7 @@
 #X obj 584 486 loadbang;
 #X obj 578 538 midi-encoder;
 #X obj 581 559 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 6100 1;
+-1 -1 3400 1;
 #X msg 648 518 1;
 #X msg 582 516 2;
 #X obj 443 423 reverb~;
@@ -49,14 +49,14 @@
 #X msg 684 244 6;
 #X obj 442 290 audio-delay~ 4000;
 #X obj 442 174 looper-new~;
-#X obj 635 106 loadbang;
-#X msg 636 135 8;
-#X obj 635 157 midi-toggle;
-#X msg 699 137 2;
-#X obj 754 108 loadbang;
-#X obj 754 159 midi-toggle;
-#X msg 799 137 2;
-#X msg 755 137 10;
+#X obj 565 108 loadbang;
+#X msg 566 137 8;
+#X obj 565 159 midi-toggle;
+#X msg 629 139 2;
+#X obj 654 105 loadbang;
+#X obj 654 156 midi-toggle;
+#X msg 699 134 2;
+#X msg 655 134 10;
 #X connect 0 0 8 0;
 #X connect 0 0 8 4;
 #X connect 1 0 2 0;
@@ -121,6 +121,6 @@
 #X connect 50 0 49 1;
 #X connect 51 0 54 0;
 #X connect 51 0 53 0;
-#X connect 52 0 46 5;
+#X connect 52 0 46 4;
 #X connect 53 0 52 1;
 #X connect 54 0 52 0;
