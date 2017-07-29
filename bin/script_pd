@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Add the following command to your /etc/profile file
+# /home/pi/pd/bin/script_pd
+
 # This script starts Pd in non-gui mode,
 # after waiting to set the alsmixer line
 # in on and in capture mode. Can probably
