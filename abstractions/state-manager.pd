@@ -38,8 +38,13 @@
 #X obj 713 32 inlet save;
 #X obj 825 33 inlet directory;
 #X symbolatom 106 127 17 0 0 0 - - -, f 17;
-#X msg 394 354 \$2/\$1;
+#X msg 393 354 \$2/\$1;
 #X msg 36 301 \$2/\$1;
+#X obj 597 371 file-exists;
+#X obj 597 392 sel 0;
+#X obj 597 433 outlet;
+#X obj 597 414 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X connect 0 0 1 0;
 #X connect 0 1 2 1;
 #X connect 0 1 5 0;
@@ -79,5 +84,9 @@
 #X connect 36 0 26 1;
 #X connect 36 0 24 1;
 #X connect 37 0 8 0;
+#X connect 37 0 39 0;
 #X connect 38 0 21 0;
+#X connect 39 0 40 0;
+#X connect 40 0 42 0;
+#X connect 42 0 41 0;
 #X coords 0 -1 1 1 120 100 1 100 100;
