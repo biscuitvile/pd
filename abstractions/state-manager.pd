@@ -1,4 +1,4 @@
-#N canvas 0 22 977 666 10;
+#N canvas 148 62 977 666 10;
 #X obj 393 504 textfile;
 #X obj 393 534 s SSSAD;
 #X obj 393 446 until;
@@ -33,10 +33,10 @@
 #X text 164 147 save;
 #X obj 393 253 symbol;
 #X obj 36 200 symbol;
-#X obj 519 31 inlet filename;
-#X obj 629 31 inlet load;
-#X obj 713 32 inlet save;
-#X obj 825 33 inlet directory;
+#X obj 4 16 inlet filename;
+#X obj 114 16 inlet load;
+#X obj 198 17 inlet save;
+#X obj 310 18 inlet directory;
 #X symbolatom 106 127 17 0 0 0 - - -, f 17;
 #X msg 393 354 \$2/\$1;
 #X msg 36 301 \$2/\$1;

@@ -1,4 +1,4 @@
-#N canvas 643 686 925 611 10;
+#N canvas 567 378 925 611 10;
 #X obj 314 308 *~;
 #X obj 314 341 outlet~ left;
 #X obj 302 11 inlet~ signal;
@@ -13,22 +13,16 @@
 #X obj 512 324 outlet~ right;
 #X text 107 382 cosine panner from Andy Farnell's book "Designing Sound"
 ;
-#X obj 110 130 hsl 100 15 0 1 0 0 \$0-pan \$0-in-pan empty -2 -8 0
-10 -262144 -1 -1 3118 1;
+#X obj 110 130 hsl 100 15 0 1 0 0 \$0-position \$0-in-position empty
+-2 -8 0 10 -262144 -1 -1 2728 1;
 #X obj 197 112 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X msg 146 55 0.5;
 #X obj 197 8 loadbang;
-#X obj 401 30 / 127;
-#X obj 408 527 outlet;
-#X obj 407 507 * 127;
-#X obj 401 10 inlet pan;
-#X obj 401 54 s \$0-in-pan;
-#X obj 527 123 r \$0-pan;
-#X obj 475 418 r \$0-pan;
-#X obj 406 438 sssad \$0-pan;
-#X obj 406 458 s \$0-in-pan;
-#X obj 407 486 r \$0-in-pan;
+#X obj 445 11 inlet;
+#X obj 445 36 route position;
+#X obj 445 60 s \$0-in-position;
+#X obj 527 123 r \$0-position;
 #X connect 0 0 1 0;
 #X connect 2 0 0 0;
 #X connect 2 0 10 0;
@@ -44,11 +38,7 @@
 #X connect 14 0 15 0;
 #X connect 15 0 13 0;
 #X connect 16 0 14 0;
-#X connect 17 0 21 0;
-#X connect 19 0 18 0;
-#X connect 20 0 17 0;
-#X connect 22 0 3 0;
-#X connect 23 0 24 1;
-#X connect 24 0 25 0;
-#X connect 26 0 19 0;
+#X connect 17 0 18 0;
+#X connect 18 0 19 0;
+#X connect 20 0 3 0;
 #X coords 0 -1 1 1 120 50 1 100 100;
