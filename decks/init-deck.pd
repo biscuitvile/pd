@@ -477,11 +477,6 @@
 #X connect 59 0 32 0;
 #X coords 0 -1 1 1 400 1120 1 100 100;
 #X restore 849 -81 pd track-3;
-#X obj 874 222 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 874 244 metro 3000;
-#X floatatom 980 250 5 0 0 0 - - -, f 5;
-#X obj 933 210 random 6000;
 #N canvas 441 210 1454 889 initialize-set-bank 0;
 #X obj 110 28 r initialize;
 #X obj 121 186 shell;
@@ -548,8 +543,4 @@
 #X connect 31 0 32 0;
 #X connect 31 1 33 0;
 #X connect 31 2 34 0;
-#X connect 36 0 37 0;
-#X connect 37 0 39 0;
-#X connect 39 0 37 1;
-#X connect 39 0 38 0;
-#X connect 40 0 5 0;
+#X connect 36 0 5 0;
