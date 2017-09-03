@@ -283,10 +283,6 @@
 #X connect 59 0 54 0;
 #X coords 0 -1 1 1 140 910 1 100 100;
 #X restore 378 -260 pd track-2;
-#X obj 1154 -416 ctlin;
-#X floatatom 1129 -390 5 0 0 0 - - -, f 5;
-#X floatatom 1167 -390 5 0 0 0 - - -, f 5;
-#X floatatom 1204 -390 5 0 0 0 - - -, f 5;
 #N canvas 0 23 1453 1259 track-3 0;
 #X obj 110 941 channel-out~;
 #X obj 94 -133 adc~;
@@ -415,13 +411,14 @@
 #X coords 0 -1 1 1 140 910 1 100 100;
 #X restore 523 -260 pd track-3;
 #X obj 680 -418 r initialize;
+#X obj 977 -436 midi-observer;
 #X connect 0 0 1 0;
 #X connect 0 0 23 0;
 #X connect 2 0 3 0;
 #X connect 3 0 29 0;
 #X connect 3 0 22 0;
 #X connect 3 1 30 0;
-#X connect 3 2 35 0;
+#X connect 3 2 31 0;
 #X connect 4 0 5 0;
 #X connect 4 0 8 0;
 #X connect 5 0 4 1;
@@ -449,7 +446,4 @@
 #X connect 25 0 1 0;
 #X connect 27 0 7 0;
 #X connect 28 0 6 0;
-#X connect 31 0 32 0;
-#X connect 31 1 33 0;
-#X connect 31 2 34 0;
-#X connect 36 0 7 0;
+#X connect 32 0 7 0;
