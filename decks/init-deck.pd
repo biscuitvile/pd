@@ -1,4 +1,4 @@
-#N canvas 292 22 1368 1210 10;
+#N canvas 0 23 2556 1396 10;
 #X obj 18 -449 loadbang-dsp;
 #X obj 18 -408 s defaults;
 #X msg 691 -297 \$1_1 \$1_2 \$1_3 \$1_4 \$1_5 \$1_6;
@@ -414,35 +414,7 @@
 #X connect 59 0 51 0;
 #X coords 0 -1 1 1 140 910 1 100 100;
 #X restore 523 -260 pd track-3;
-#N canvas 441 210 1454 889 initialize-set-bank 0;
-#X obj 110 28 r initialize;
-#X obj 121 186 shell;
-#X obj 110 80 t b b b;
-#X obj 110 57 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 351 155 0;
-#X obj 349 285 f;
-#X obj 380 285 + 1;
-#X obj 22 157 delay 50;
-#X msg 122 213 bang;
-#X obj 140 329 int;
-#X obj 140 373 outlet;
-#X msg 121 156 ls -1 /home/pi/pd/memory | wc -l;
-#X connect 0 0 3 0;
-#X connect 1 0 8 0;
-#X connect 2 0 7 0;
-#X connect 2 1 11 0;
-#X connect 2 2 4 0;
-#X connect 3 0 2 0;
-#X connect 4 0 5 0;
-#X connect 5 0 6 0;
-#X connect 5 0 9 1;
-#X connect 6 0 5 1;
-#X connect 7 0 9 0;
-#X connect 8 0 5 0;
-#X connect 9 0 10 0;
-#X connect 11 0 1 0;
-#X restore 783 -361 pd initialize-set-bank;
+#X obj 680 -418 r initialize;
 #X connect 0 0 1 0;
 #X connect 0 0 23 0;
 #X connect 2 0 3 0;
@@ -480,4 +452,4 @@
 #X connect 31 0 32 0;
 #X connect 31 1 33 0;
 #X connect 31 2 34 0;
-#X connect 36 0 5 0;
+#X connect 36 0 7 0;
