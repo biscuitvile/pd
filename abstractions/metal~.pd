@@ -1,6 +1,6 @@
 #N canvas 1121 150 1058 895 10;
 #X obj 245 202 demultiplex~;
-#X obj 198 135 tgl 15 0 \$0-toggle \$0-in-toggle empty 17 7 0 10 -262144
+#X obj 198 118 tgl 15 0 \$0-toggle \$0-in-toggle empty 17 7 0 10 -262144
 -1 -1 0 1;
 #X obj 245 309 outlet~;
 #X obj 245 129 inlet~ audio;
@@ -40,4 +40,4 @@
 #X connect 5 0 6 0;
 #X connect 6 0 8 0;
 #X connect 7 0 0 0;
-#X coords 0 -1 1 1 120 60 1 100 100;
+#X coords 0 -1 1 1 120 40 1 100 100;
