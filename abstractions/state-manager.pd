@@ -1,4 +1,4 @@
-#N canvas 148 62 977 666 10;
+#N canvas 205 142 770 637 10;
 #X obj 393 504 textfile;
 #X obj 393 534 s SSSAD;
 #X obj 393 446 until;

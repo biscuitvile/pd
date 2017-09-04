@@ -45,7 +45,7 @@ in this scenario.;
 -262144 -1 -1;
 #X text 25 64 play;
 #X obj 67 42 tgl 15 0 \$0-monitor \$0-monitor-inlet empty 17 7 0 10
--262144 -1 -1 1 1;
+-262144 -1 -1 0 1;
 #X obj 40 609 *~ 1;
 #X msg 731 713 1;
 #X obj 553 738 *~ 0;
