@@ -19,4 +19,5 @@ sleep 2s
 
 echo "Starting Pd..."
 
-pd -nogui -midiindev 1 -midioutdev 1 -lib zexy /home/pi/pd/decks/init-deck.pd &
+# pd -nogui -midiindev 1 -midioutdev 1 -lib zexy /home/pi/pd/decks/init-deck.pd &
+pd -midiindev 1 -midioutdev 1 -lib zexy /home/pi/pd/decks/init-deck.pd &
