@@ -1,4 +1,4 @@
-#N canvas 0 23 2556 1396 10;
+#N canvas 32 51 1436 803 10;
 #X obj 18 -449 loadbang-dsp;
 #X obj 18 -408 s defaults;
 #X msg 691 -297 \$1_1 \$1_2 \$1_3 \$1_4 \$1_5 \$1_6;
@@ -412,6 +412,12 @@
 #X restore 523 -260 pd track-3;
 #X obj 680 -418 r initialize;
 #X obj 977 -436 midi-observer;
+#X obj 1260 -161 time GMT;
+#X msg 1196 -190 bang;
+#X obj 1196 -161 date GMT;
+#X obj 1199 -122 pack f f f f f f;
+#X obj 1199 -46 print;
+#X msg 1199 -89 symbol \$1-\$2-\$3-\$4-\$5-\$6;
 #X connect 0 0 1 0;
 #X connect 0 0 23 0;
 #X connect 2 0 3 0;
@@ -447,3 +453,13 @@
 #X connect 27 0 7 0;
 #X connect 28 0 6 0;
 #X connect 32 0 7 0;
+#X connect 34 0 37 3;
+#X connect 34 1 37 4;
+#X connect 34 2 37 5;
+#X connect 35 0 36 0;
+#X connect 35 0 34 0;
+#X connect 36 0 37 0;
+#X connect 36 1 37 1;
+#X connect 36 2 37 2;
+#X connect 37 0 39 0;
+#X connect 39 0 38 0;
