@@ -405,7 +405,7 @@
 #X coords 0 -1 1 1 140 910 1 100 100;
 #X restore 610 -328 pd track-3;
 #X obj 629 -524 midi-observer;
-#N canvas 718 200 1536 892 memory-navigation 1;
+#N canvas 718 200 1536 892 memory-navigation 0;
 #X obj 603 153 textfile;
 #X msg 601 600 bang;
 #X msg 638 647 rewind;
@@ -478,8 +478,8 @@
 #X obj 162 511 outlet;
 #X obj 162 486 r directory;
 #X obj 775 186 + 2;
+#X obj 10 225 timestamp-generator;
 #X obj 993 52 timestamp-generator;
-#X obj 187 255 timestamp-generator;
 #X connect 0 0 13 0;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
@@ -532,8 +532,8 @@
 #X connect 40 0 27 0;
 #X connect 43 0 36 0;
 #X connect 43 1 10 0;
-#X connect 43 2 65 0;
-#X connect 44 0 66 0;
+#X connect 43 2 66 0;
+#X connect 44 0 65 0;
 #X connect 45 0 44 0;
 #X connect 46 0 39 0;
 #X connect 47 0 40 0;
@@ -553,8 +553,8 @@
 #X connect 61 1 11 0;
 #X connect 63 0 62 0;
 #X connect 64 0 32 0;
-#X connect 65 0 53 0;
-#X connect 66 0 12 0;
+#X connect 65 0 12 0;
+#X connect 66 0 53 0;
 #X coords 0 -1 1 1 300 120 1 100 100;
 #X restore -89 -448 pd memory-navigation;
 #X obj -89 -132 s defaults;

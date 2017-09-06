@@ -1,0 +1,11 @@
+#N canvas 0 22 450 300 10;
+#X msg 26 109 symbol 0\$1;
+#X obj 26 54 moses 10;
+#X obj 71 83 makefilename %s;
+#X obj 26 27 inlet;
+#X obj 26 172 outlet;
+#X connect 0 0 4 0;
+#X connect 1 0 0 0;
+#X connect 1 1 2 0;
+#X connect 2 0 4 0;
+#X connect 3 0 1 0;
