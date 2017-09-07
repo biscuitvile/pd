@@ -4,8 +4,8 @@
 #X obj 700 237 writesf~ 2;
 #X obj 334 232 timestamp-generator;
 #X msg 663 172 open ../audio/\$1.wav;
-#X obj 268 24 inlet~;
-#X obj 268 45 s~ \$0-input-right;
+#X obj 352 24 inlet~;
+#X obj 352 45 s~ \$0-input-right;
 #X obj 187 24 inlet;
 #X obj 187 45 s \$0-in-rec;
 #X obj 75 24 inlet~;
@@ -47,6 +47,8 @@
 #X obj 408 428 s \$0-play-stop;
 #X obj 736 326 r \$0-open-file;
 #X obj 294 352 r \$0-play-end;
+#X obj 267 24 inlet;
+#X obj 267 45 s \$0-in-play;
 #X connect 0 0 2 0;
 #X connect 1 0 2 0;
 #X connect 3 0 19 0;
@@ -83,4 +85,5 @@
 #X connect 40 0 37 0;
 #X connect 44 0 35 0;
 #X connect 45 0 38 0;
+#X connect 46 0 47 0;
 #X coords 0 -1 1 1 120 80 1 100 100;
