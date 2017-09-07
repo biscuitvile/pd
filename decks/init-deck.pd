@@ -1,4 +1,4 @@
-#N canvas 578 158 1541 951 10;
+#N canvas 286 37 1799 1188 10;
 #X obj -89 -526 loadbang-dsp;
 #X obj -89 -485 s defaults;
 #X obj -71 66 ctlout 4 2;
@@ -622,6 +622,9 @@
 #X obj 225 51 r~ track-2-right;
 #X obj 225 31 r~ track-1-right;
 #X obj 225 71 r~ track-3-right;
+#X obj 149 239 dac~;
+#X connect 0 0 9 0;
+#X connect 0 1 9 1;
 #X connect 1 0 2 0;
 #X connect 2 0 0 1;
 #X connect 3 0 0 0;
