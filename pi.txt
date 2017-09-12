@@ -1,0 +1,52 @@
+- Fresh Raspian PIXEL reinstall from NOOBS, audioinjector already connected
+- Connect to wifi network
+
+- Main menu -> Preferences -> Raspberry Pi Configuration -> Interfaces
+- Enable SSH & VPN
+- Main menu -> Preferences -> Raspberry Pi Configuration
+- Change password
+- Main menu -> Preferences -> Raspberry Pi Configuration
+- Change hostname
+
+- Download audioinjector files from flatmax forum: http://www.flatmax.org/phpbb/viewtopic.php?f=5&t=3
+- Install the scripts .deb package
+- Authenticate with default user/password
+
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install vim puredata pd-freeverb pd-zexy pd-cyclone pd-hcs
+
+audioinjector-setup.sh
+sudo reboot
+
+alsactl --file /usr/share/doc/audioInjector/asound.state.RCA.thru.test restore
+
+
+ssh-keygen -t rsa -b 4096 -C "andy.borsz@gmail.com"
+eval "$(ssh-agent -s)"
+
+git config --global user.name "Andy Borsz"
+git config --global user.email "andy.borsz@gmail.com"
+
+Add ~/.ssh/id_rsa.pub to GitHub account SSH keys
+
+cd ~
+git clone git://github.com/biscuitvile/pd.git
+cd pd
+
+Add the following to pd path preferences:
+
+ /home/pi/pd/abstractions
+ /usr/lib/pd/extra/cyclone
+ /usr/lib/pd/extra/zexy
+ /usr/lib/pd/extra/freeverb~
+ /usr/lib/pd/extra/ggee
+/usr/lib/pd/extra/hcs
+ /home/pi/pd/vendor/sssad
+ /home/pi/pd/vendor/sssad/_sssad
+
+Modify /etc/profile for pd startup per pd/bin/script_pd
+
+sudo cp script/00-midi-fighter-shutdown.rules /etc/udev/rules.d
+ls /etc/udev/rules.d
+sudo udevadm control --reload-rules
