@@ -666,7 +666,7 @@
 #X connect 9 1 8 1;
 #X coords 0 -1 1 1 145 110 1 100 100;
 #X restore 1000 -523 pd rec;
-#X msg 204 -474 symbol /Users/alf/pd/memory;
+#X msg 204 -474 symbol /Users/andy/pd/memory;
 #X obj -14 -261 sel 127;
 #X obj -14 -282 midi-encoder 31 4;
 #X connect 0 0 1 0;
