@@ -1,0 +1,10 @@
+#N canvas 245 59 1436 803 10;
+#X obj -89 -576 loadbang-dsp;
+#X obj -89 -535 s defaults;
+#X obj -89 -555 s initialize;
+#X obj -8 -550 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 869 -524 midi-observer;
+#X connect 0 0 1 0;
+#X connect 0 0 2 0;
+#X connect 3 0 1 0;
