@@ -41,7 +41,7 @@ Add the following to pd path preferences:
  /usr/lib/pd/extra/zexy
  /usr/lib/pd/extra/freeverb~
  /usr/lib/pd/extra/ggee
-/usr/lib/pd/extra/hcs
+ /usr/lib/pd/extra/hcs
  /home/pi/pd/vendor/sssad
  /home/pi/pd/vendor/sssad/_sssad
 
