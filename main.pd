@@ -5,11 +5,11 @@
 #X obj 178 120 midi-encoder 1 1;
 #X obj 154 191 *~ 1;
 #X obj 179 154 / 127;
-#X obj 474 592 dac~;
-#X obj 470 532 *~ 1;
-#X obj 495 495 / 127;
+#X obj 449 738 dac~;
+#X obj 445 678 *~ 1;
+#X obj 470 641 / 127;
 #X obj 418 45 adc~;
-#X obj 494 461 midi-encoder 2 1;
+#X obj 469 607 midi-encoder 2 1;
 #X obj 450 271 looper-new~;
 #X obj 525 137 midi-toggle 1 2;
 #X obj 472 74 midi-toggle 0 2;
@@ -17,6 +17,13 @@
 #X obj 490 95 midi-button 4 2;
 #X obj 512 116 midi-button 5 2;
 #X obj 538 158 midi-button 12 2;
+#X obj 454 429 freeze~;
+#X obj 680 419 freeze-control;
+#X msg 995 379 switch 0 \, blend 0 \, purity 0 \, phaselock 0 \, speed
+0;
+#X obj 806 268 loadbang;
+#X msg 678 359 blend 7 \, speed 3 \, purity 6 \, switch 3 \, phaselock
+6 \, encoder-channel 1 \, toggle-channel 2;
 #X connect 0 0 4 0;
 #X connect 1 0 0 0;
 #X connect 3 0 5 0;
@@ -28,10 +35,16 @@
 #X connect 8 0 7 1;
 #X connect 9 0 11 0;
 #X connect 10 0 8 0;
-#X connect 11 0 7 0;
+#X connect 11 0 18 0;
 #X connect 12 0 11 4;
 #X connect 13 0 11 1;
 #X connect 14 0 11 6;
 #X connect 15 0 11 2;
 #X connect 16 0 11 3;
 #X connect 17 0 11 5;
+#X connect 18 0 7 0;
+#X connect 19 0 18 1;
+#X connect 20 0 19 1;
+#X connect 21 0 22 0;
+#X connect 21 0 20 0;
+#X connect 22 0 19 0;
