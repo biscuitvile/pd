@@ -1,10 +1,11 @@
-#N canvas 0 23 1436 803 10;
+#N canvas 0 93 640 387 10;
+#X declare -stdpath zexy -stdlib zexy;
 #X obj -89 -576 loadbang-dsp;
 #X obj -89 -535 s defaults;
 #X obj -89 -555 s initialize;
 #X obj -8 -550 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#N canvas 0 23 1436 803 track-1 0;
+#N canvas 0 50 1436 803 track-1 0;
 #X obj 110 1026 channel-out~;
 #X obj 110 884 cosine-pan~;
 #X obj 110 769 reverb~;
@@ -163,7 +164,7 @@
 #X connect 73 0 6 0;
 #X coords 0 -1 1 1 140 995 1 100 100;
 #X restore 322 -328 pd track-1;
-#N canvas 234 22 1430 803 track-2 0;
+#N canvas 234 50 1430 803 track-2 0;
 #X obj 110 1030 channel-out~;
 #X obj 110 886 cosine-pan~;
 #X obj 110 771 reverb~;
@@ -322,7 +323,7 @@
 #X connect 73 0 67 0;
 #X coords 0 -1 1 1 140 995 1 100 100;
 #X restore 465 -328 pd track-2;
-#N canvas 0 22 1436 803 track-3 0;
+#N canvas 0 50 1436 803 track-3 0;
 #X obj 110 1025 channel-out~;
 #X obj 110 885 cosine-pan~;
 #X obj 110 770 reverb~;
@@ -485,7 +486,7 @@
 #X obj -89 -162 s defaults;
 #X obj 102 -304 r initialize;
 #X obj -89 -268 state-manager;
-#N canvas 0 22 832 678 rec 0;
+#N canvas 0 50 832 678 rec 0;
 #X obj 168 11 midi-toggle 60 2;
 #X obj 168 32 / 127;
 #X obj 112 -30 r~ track-2-left;
@@ -511,10 +512,11 @@
 #X msg 102 -283 symbol /Users/andy/pd/memory;
 #X symbolatom -89 -342 10 0 0 0 - - -, f 10;
 #X obj -89 -416 r initialize;
-#X obj -89 -368 l2s;
 #X floatatom -89 -390 5 0 0 0 - - -, f 5;
 #X obj -52 -307 midi-button 10 4;
 #X obj -14 -287 midi-button 13 4;
+#X obj -89 -368 l2s;
+#X obj -89 -443 declare -stdpath zexy -stdlib zexy;
 #X connect 0 0 1 0;
 #X connect 0 0 2 0;
 #X connect 3 0 1 0;
@@ -525,8 +527,8 @@
 #X connect 13 0 4 0;
 #X connect 13 0 5 0;
 #X connect 13 0 6 0;
-#X connect 14 0 16 0;
-#X connect 15 0 13 0;
-#X connect 16 0 15 0;
-#X connect 17 0 10 1;
-#X connect 18 0 10 2;
+#X connect 14 0 15 0;
+#X connect 15 0 18 0;
+#X connect 16 0 10 1;
+#X connect 17 0 10 2;
+#X connect 18 0 13 0;
