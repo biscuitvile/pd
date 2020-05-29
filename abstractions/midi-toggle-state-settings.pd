@@ -1,4 +1,4 @@
-#N canvas 229 471 851 591 10;
+#N canvas 229 437 851 591 10;
 #X obj 324 269 ctlout;
 #X obj 289 245 * 127;
 #X obj 240 148 midi-encoder;
@@ -38,6 +38,7 @@
 #X connect 18 0 10 0;
 #X connect 19 0 6 1;
 #X connect 19 0 13 0;
+#X connect 19 0 0 0;
 #X connect 20 0 21 0;
 #X connect 22 0 6 1;
 #X connect 22 0 13 0;

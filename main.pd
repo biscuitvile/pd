@@ -1,4 +1,4 @@
-#N canvas 0 192 1304 876 10;
+#N canvas 0 152 1304 876 10;
 #X declare -stdpath zexy -stdlib zexy;
 #X obj -89 -576 loadbang-dsp;
 #X obj -89 -535 s defaults;
