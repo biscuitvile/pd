@@ -78,7 +78,6 @@
 #X obj 387 924 / 127;
 #X obj 387 903 midi-toggle 11 2;
 #X obj 110 940 file-recorder~;
-#X obj 94 -133 adc~ 2;
 #X obj 725 -91 inlet on-color;
 #X obj 843 -91 inlet off-color;
 #X obj 725 -64 s track-1-on-color;
@@ -89,6 +88,7 @@
 #X msg 916 371 fine 0 \, coarse 1 \, width 0 \, on-color 23 \, off-color
 0;
 #X obj 275 229 freeze-control track-1-freeze;
+#X obj 94 -133 adc~;
 #X connect 0 0 55 0;
 #X connect 0 1 56 0;
 #X connect 1 0 0 0;
@@ -107,8 +107,8 @@
 #X connect 10 0 41 0;
 #X connect 11 0 45 0;
 #X connect 12 0 44 0;
-#X connect 13 0 74 0;
-#X connect 14 0 75 0;
+#X connect 13 0 73 0;
+#X connect 14 0 74 0;
 #X connect 15 0 54 0;
 #X connect 16 0 6 6;
 #X connect 17 0 6 2;
@@ -124,7 +124,7 @@
 #X connect 27 0 26 0;
 #X connect 28 0 29 0;
 #X connect 29 0 0 1;
-#X connect 30 0 77 0;
+#X connect 30 0 76 0;
 #X connect 31 0 46 1;
 #X connect 32 0 31 0;
 #X connect 33 0 32 0;
@@ -144,7 +144,7 @@
 #X connect 47 0 9 0;
 #X connect 48 0 47 1;
 #X connect 49 0 51 0;
-#X connect 50 0 76 0;
+#X connect 50 0 75 0;
 #X connect 51 0 48 0;
 #X connect 52 0 53 0;
 #X connect 53 0 6 7;
@@ -162,13 +162,13 @@
 #X connect 67 0 66 0;
 #X connect 68 0 0 0;
 #X connect 68 1 0 2;
-#X connect 69 0 6 0;
+#X connect 69 0 71 0;
 #X connect 70 0 72 0;
-#X connect 71 0 73 0;
-#X connect 74 0 77 1;
-#X connect 75 0 31 1;
-#X connect 76 0 48 1;
-#X connect 77 0 8 1;
+#X connect 73 0 76 1;
+#X connect 74 0 31 1;
+#X connect 75 0 48 1;
+#X connect 76 0 8 1;
+#X connect 77 0 6 0;
 #X coords 0 -1 1 1 140 995 1 100 100;
 #X restore 322 -328 pd track-1;
 #N canvas 234 50 1430 803 track-2 0;
@@ -242,7 +242,6 @@
 #X obj 277 903 midi-toggle 26 2;
 #X obj 387 903 midi-toggle 27 2;
 #X obj 110 940 file-recorder~;
-#X obj 93 -133 adc~ 2;
 #X obj 273 344 metal-control track-2-metal;
 #X obj 534 390 pitch-shifter-control track-2-pitch-shift;
 #X msg 612 204 switch 0 \, blend 0 \, purity 0 \, phaselock 0 \, speed
@@ -251,6 +250,7 @@
 #X msg 908 373 fine 0 \, coarse 1 \, width 0 \, on-color 90 \, off-color
 0;
 #X obj 265 229 freeze-control track-2-freeze;
+#X obj 93 -132 adc~;
 #X connect 0 0 51 0;
 #X connect 0 1 52 0;
 #X connect 1 0 0 0;
@@ -264,8 +264,8 @@
 #X connect 6 0 20 0;
 #X connect 7 0 24 0;
 #X connect 8 0 23 0;
-#X connect 9 0 70 0;
-#X connect 10 0 71 0;
+#X connect 9 0 69 0;
+#X connect 10 0 70 0;
 #X connect 11 0 47 0;
 #X connect 12 0 31 0;
 #X connect 13 0 32 0;
@@ -286,9 +286,9 @@
 #X connect 28 0 61 4;
 #X connect 29 0 61 5;
 #X connect 30 0 61 6;
-#X connect 31 0 68 0;
+#X connect 31 0 67 0;
 #X connect 32 0 38 0;
-#X connect 33 0 73 0;
+#X connect 33 0 72 0;
 #X connect 34 0 39 0;
 #X connect 35 0 40 0;
 #X connect 36 0 41 0;
@@ -299,9 +299,9 @@
 #X connect 41 0 1 1;
 #X connect 42 0 0 1;
 #X connect 43 0 46 0;
-#X connect 44 0 72 0;
+#X connect 44 0 71 0;
 #X connect 45 0 5 0;
-#X connect 46 0 69 0;
+#X connect 46 0 68 0;
 #X connect 47 0 61 4;
 #X connect 48 0 45 0;
 #X connect 49 0 50 0;
@@ -322,13 +322,13 @@
 #X connect 65 0 63 0;
 #X connect 66 0 0 0;
 #X connect 66 1 0 2;
-#X connect 67 0 61 0;
-#X connect 68 0 48 1;
-#X connect 69 0 45 1;
-#X connect 70 0 73 1;
+#X connect 67 0 48 1;
+#X connect 68 0 45 1;
+#X connect 69 0 72 1;
+#X connect 70 0 67 1;
 #X connect 71 0 68 1;
-#X connect 72 0 69 1;
-#X connect 73 0 60 1;
+#X connect 72 0 60 1;
+#X connect 73 0 61 0;
 #X coords 0 -1 1 1 140 995 1 100 100;
 #X restore 465 -328 pd track-2;
 #N canvas 0 50 1436 803 track-3 0;
@@ -402,7 +402,6 @@
 #X obj 277 903 midi-toggle 42 2;
 #X obj 387 903 midi-toggle 43 2;
 #X obj 110 940 file-recorder~;
-#X obj 94 -133 adc~ 2;
 #X obj 273 344 metal-control track-3-metal;
 #X obj 265 229 freeze-control track-3-freeze;
 #X obj 534 390 pitch-shifter-control track-3-pitch-shift;
@@ -411,6 +410,7 @@
 #X msg 432 297 toggle 0 \, on-color 40 \, off-color 0;
 #X msg 908 373 fine 0 \, coarse 1 \, width 0 \, on-color 40 \, off-color
 0;
+#X obj 94 -133 adc~;
 #X connect 0 0 51 0;
 #X connect 0 1 52 0;
 #X connect 1 0 0 0;
@@ -424,8 +424,8 @@
 #X connect 6 0 20 0;
 #X connect 7 0 24 0;
 #X connect 8 0 23 0;
-#X connect 9 0 71 0;
-#X connect 10 0 72 0;
+#X connect 9 0 70 0;
+#X connect 10 0 71 0;
 #X connect 11 0 47 0;
 #X connect 12 0 37 0;
 #X connect 13 0 38 0;
@@ -451,8 +451,8 @@
 #X connect 33 0 61 5;
 #X connect 34 0 61 6;
 #X connect 35 0 61 4;
-#X connect 36 0 69 0;
-#X connect 37 0 68 0;
+#X connect 36 0 68 0;
+#X connect 37 0 67 0;
 #X connect 38 0 25 0;
 #X connect 39 0 26 0;
 #X connect 40 0 27 0;
@@ -460,8 +460,8 @@
 #X connect 42 0 29 0;
 #X connect 43 0 5 0;
 #X connect 44 0 46 0;
-#X connect 45 0 73 0;
-#X connect 46 0 70 0;
+#X connect 45 0 72 0;
+#X connect 46 0 69 0;
 #X connect 47 0 61 4;
 #X connect 48 0 43 0;
 #X connect 49 0 50 0;
@@ -482,13 +482,13 @@
 #X connect 65 0 63 0;
 #X connect 66 0 0 0;
 #X connect 66 1 0 2;
-#X connect 67 0 61 0;
-#X connect 68 0 48 1;
-#X connect 69 0 60 1;
-#X connect 70 0 43 1;
-#X connect 71 0 69 1;
-#X connect 72 0 68 1;
-#X connect 73 0 70 1;
+#X connect 67 0 48 1;
+#X connect 68 0 60 1;
+#X connect 69 0 43 1;
+#X connect 70 0 68 1;
+#X connect 71 0 67 1;
+#X connect 72 0 69 1;
+#X connect 73 0 61 0;
 #X coords 0 -1 1 1 140 995 1 100 100;
 #X restore 610 -328 pd track-3;
 #X obj 869 -524 midi-observer;
