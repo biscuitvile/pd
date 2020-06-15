@@ -1,0 +1,33 @@
+#N canvas 802 241 795 666 10;
+#X msg 249 112 \; Cmajor 0 48 50 52 53 55 57 59 60 62 64 65 67 69 71
+72 74 76 77 79 81 83 84 86 88 89 91 93 95 96;
+#X obj 247 58 table Cmajor 27;
+#X obj 29 30 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 52 30 stop;
+#X obj 31 115 random 27;
+#X msg 117 116 set Cmajor;
+#X obj 65 159 tabread;
+#X obj 67 214 makenote;
+#X floatatom 138 167 5 0 0 0 - - -, f 5;
+#X floatatom 165 200 5 0 0 0 - - -, f 5;
+#X obj 68 271 noteout;
+#X obj 79 91 random 6000;
+#X obj 30 70 metro 3000;
+#X floatatom 135 244 5 0 0 0 - - -, f 5;
+#X obj 135 263 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 2 0 12 0;
+#X connect 3 0 12 0;
+#X connect 4 0 6 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 10 0;
+#X connect 7 0 13 0;
+#X connect 7 1 10 1;
+#X connect 8 0 7 1;
+#X connect 9 0 7 2;
+#X connect 11 0 12 1;
+#X connect 12 0 4 0;
+#X connect 12 0 11 0;
+#X connect 13 0 14 0;
