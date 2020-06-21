@@ -75,10 +75,6 @@
 #X obj 277 924 / 127;
 #X obj 387 924 / 127;
 #X obj 110 940 file-recorder~;
-#X obj 725 -91 inlet on-color;
-#X obj 843 -91 inlet off-color;
-#X obj 725 -64 s track-1-on-color;
-#X obj 843 -64 s track-2-off-color;
 #X msg 592 204 switch 0 \, blend 0 \, purity 0 \, phaselock 0 \, speed
 0 \, on-color 23 \, off-color 0;
 #X msg 442 299 toggle 0 \, on-color 23 \, off-color 0;
@@ -107,8 +103,8 @@
 #X connect 10 0 40 0;
 #X connect 11 0 44 0;
 #X connect 12 0 43 0;
-#X connect 13 0 70 0;
-#X connect 14 0 71 0;
+#X connect 13 0 66 0;
+#X connect 14 0 67 0;
 #X connect 15 0 53 0;
 #X connect 16 0 6 2;
 #X connect 17 0 6 3;
@@ -123,7 +119,7 @@
 #X connect 26 0 25 0;
 #X connect 27 0 28 0;
 #X connect 28 0 0 1;
-#X connect 29 0 73 0;
+#X connect 29 0 69 0;
 #X connect 30 0 45 1;
 #X connect 31 0 30 0;
 #X connect 32 0 31 0;
@@ -143,7 +139,7 @@
 #X connect 46 0 9 0;
 #X connect 47 0 46 1;
 #X connect 48 0 50 0;
-#X connect 49 0 72 0;
+#X connect 49 0 68 0;
 #X connect 50 0 47 0;
 #X connect 51 0 52 0;
 #X connect 52 0 6 7;
@@ -159,16 +155,14 @@
 #X connect 64 0 65 2;
 #X connect 65 0 0 0;
 #X connect 65 1 0 2;
-#X connect 66 0 68 0;
-#X connect 67 0 69 0;
-#X connect 70 0 73 1;
-#X connect 71 0 30 1;
-#X connect 72 0 47 1;
-#X connect 73 0 8 1;
-#X connect 74 0 6 0;
-#X connect 75 0 63 0;
-#X connect 76 0 64 0;
-#X connect 77 0 6 6;
+#X connect 66 0 69 1;
+#X connect 67 0 30 1;
+#X connect 68 0 47 1;
+#X connect 69 0 8 1;
+#X connect 70 0 6 0;
+#X connect 71 0 63 0;
+#X connect 72 0 64 0;
+#X connect 73 0 6 6;
 #X coords 0 -1 1 1 140 995 1 100 100;
 #X restore 322 -328 pd track-1;
 #N canvas 234 50 1430 803 track-2 0;
