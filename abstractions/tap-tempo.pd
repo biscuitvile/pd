@@ -25,6 +25,7 @@
 #X obj 132 363 r \$0-tempo;
 #X obj 275 230 inlet ms;
 #X obj 275 382 outlet ms;
+#X obj 104 59 inlet bang;
 #X connect 0 0 2 0;
 #X connect 0 1 4 0;
 #X connect 1 0 11 0;
@@ -48,4 +49,5 @@
 #X connect 18 0 10 0;
 #X connect 21 0 20 0;
 #X connect 22 0 12 0;
+#X connect 24 0 9 0;
 #X coords 0 -1 1 1 85 60 1 100 100;
