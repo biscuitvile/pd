@@ -1,4 +1,4 @@
-#N canvas 595 106 1017 903 10;
+#N canvas 571 57 1017 903 10;
 #X obj 10 -14 inlet tick;
 #N canvas 205 473 750 458 statemachine 0;
 #X obj 172 15 inlet current-state;
@@ -38,7 +38,7 @@
 #X obj 37 242 route 0 1 2 3, f 48;
 #X obj 10 503 qlist;
 #X obj 10 472 r \$0-seqlist;
-#N canvas 0 23 749 317 makeids 1;
+#N canvas 0 23 749 317 makeids 0;
 #X obj 178 114 makefilename %s-dummy;
 #X obj 178 141 s \$0-dummy-id;
 #X obj 43 141 s \$0-note-id;
@@ -69,16 +69,20 @@
 #X text 117 137 2 reset loop length;
 #X obj 68 44 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 68 67 midi-pulse-on 10 2 3;
 #X obj 12 44 t b b b;
-#X connect 0 0 8 0;
+#X obj 143 24 r \$0-toggle-num;
+#X floatatom 143 45 5 0 0 0 - - -, f 5;
+#X obj 68 67 midi-pulse-on;
+#X connect 0 0 7 0;
 #X connect 4 0 3 0;
-#X connect 6 0 7 0;
-#X connect 8 0 4 0;
-#X connect 8 1 1 0;
-#X connect 8 2 6 0;
+#X connect 6 0 10 0;
+#X connect 7 0 4 0;
+#X connect 7 1 1 0;
+#X connect 7 2 6 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 1;
 #X restore 108 269 pd record;
-#N canvas 0 23 722 568 play 0;
+#N canvas 307 586 722 568 play 0;
 #X obj 69 130 i;
 #X msg 69 177 add \$1 \$2 pause;
 #X obj 69 154 pack f s;
@@ -96,7 +100,9 @@
 #X obj 35 263 s \$0-init-current-beat;
 #X obj 175 62 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 175 85 midi-pulse-on 10 2 3;
+#X obj 250 43 r \$0-toggle-num;
+#X floatatom 250 64 5 0 0 0 - - -, f 5;
+#X obj 175 85 midi-pulse-on;
 #X connect 0 0 2 0;
 #X connect 1 0 5 0;
 #X connect 2 0 1 0;
@@ -108,7 +114,9 @@
 #X connect 12 2 6 0;
 #X connect 12 3 15 0;
 #X connect 13 0 14 0;
-#X connect 15 0 16 0;
+#X connect 15 0 18 0;
+#X connect 16 0 17 0;
+#X connect 17 0 18 1;
 #X restore 179 269 pd play;
 #N canvas 0 23 450 300 stop 0;
 #X obj 22 21 inlet bang;
@@ -118,13 +126,17 @@
 #X obj 130 79 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 24 64 t b b b;
-#X obj 130 104 midi-pulse-off 10 2 3;
+#X obj 130 104 midi-pulse-off;
+#X obj 211 61 r \$0-toggle-num;
+#X floatatom 211 82 5 0 0 0 - - -, f 5;
 #X connect 0 0 5 0;
 #X connect 1 0 2 0;
 #X connect 4 0 6 0;
 #X connect 5 0 1 0;
 #X connect 5 1 3 0;
 #X connect 5 2 4 0;
+#X connect 7 0 8 0;
+#X connect 8 0 6 1;
 #X restore 250 269 pd stop;
 #N canvas 0 23 450 300 clear 0;
 #X obj 16 15 inlet bang;
@@ -137,7 +149,9 @@
 #X obj 16 42 t b b b b, f 27;
 #X obj 175 64 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 175 89 midi-pulse-off 10 2 3;
+#X obj 175 89 midi-pulse-off;
+#X obj 256 46 r \$0-toggle-num;
+#X floatatom 256 67 5 0 0 0 - - -, f 5;
 #X connect 0 0 7 0;
 #X connect 1 0 2 0;
 #X connect 3 0 4 0;
@@ -147,6 +161,8 @@
 #X connect 7 2 5 0;
 #X connect 7 3 8 0;
 #X connect 8 0 9 0;
+#X connect 10 0 11 0;
+#X connect 11 0 9 1;
 #X restore 37 269 pd clear;
 #X floatatom 706 149 5 0 0 0 loop_length_beats #0-loop-length -, f
 5;
@@ -241,7 +257,7 @@
 #N canvas 0 23 387 346 bpmtotempo 0;
 #X obj 12 12 inlet bpm;
 #X obj 51 57 s \$0-global-bpm;
-#X obj 64 123 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 64 123 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 64 79 r \$0-current-state;
 #X text 95 102 only allow loop bpm change when clear state;
@@ -307,7 +323,7 @@
 #X obj 16 648 unpack f f;
 #X obj 16 722 noteout;
 #X obj 362 -32 inlet mute;
-#X obj 570 -14 inlet bpm;
+#X obj 679 -22 inlet bpm;
 #X obj 120 609 == 0;
 #X obj 25 683 f;
 #X obj 120 630 sel 0;
@@ -361,6 +377,8 @@
 #X obj 264 62 r PLAY-ALL;
 #X msg 264 83 2;
 #X obj 16 602 r \$3-note;
+#X obj 561 -30 inlet toggle-num;
+#X obj 562 -7 s \$0-toggle-num;
 #X connect 0 0 26 0;
 #X connect 0 0 3 0;
 #X connect 1 0 3 1;
@@ -435,4 +453,5 @@
 #X connect 92 0 93 0;
 #X connect 93 0 1 2;
 #X connect 94 0 46 0;
+#X connect 95 0 96 0;
 #X coords 0 -1 1 1 90 105 1 100 100;
