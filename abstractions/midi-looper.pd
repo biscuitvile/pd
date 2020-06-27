@@ -44,7 +44,7 @@
 #X obj 43 141 s \$0-note-id;
 #X obj 98 40 r \$0-filename;
 #X obj 99 70 pack s;
-#X obj 43 114 makefilename \$3-note;
+#X obj 43 114 makefilename \$2-note;
 #X connect 0 0 1 0;
 #X connect 3 0 4 0;
 #X connect 4 0 0 0;
@@ -185,8 +185,8 @@
 #X obj 43 96 r \$0-current-state;
 #X obj 43 118 == 1;
 #X floatatom 75 193 5 0 0 0 - - -, f 5;
-#X obj 203 224 midi-number-state-settings \$3-loop-length;
 #X obj 203 205 r \$0-loop-length;
+#X obj 204 224 midi-number-state-settings \$2-loop-length;
 #X connect 0 0 1 0;
 #X connect 1 0 0 1;
 #X connect 1 0 3 0;
@@ -207,8 +207,8 @@
 #X connect 16 0 17 0;
 #X connect 17 0 2 1;
 #X connect 18 0 3 0;
-#X connect 19 0 18 0;
-#X connect 20 0 19 0;
+#X connect 19 0 20 0;
+#X connect 20 0 18 0;
 #X restore 670 108 pd beatcounter;
 #X obj 43 363 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -252,7 +252,7 @@
 #N canvas 0 23 387 346 bpmtotempo 0;
 #X obj 12 12 inlet bpm;
 #X obj 51 57 s \$0-global-bpm;
-#X obj 64 123 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 64 123 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 64 79 r \$0-current-state;
 #X text 95 102 only allow loop bpm change when clear state;
@@ -365,13 +365,13 @@
 #X obj 362 355 r LOAD;
 #X obj 264 62 r PLAY-ALL;
 #X msg 264 83 2;
-#X obj 16 602 r \$3-note;
 #X obj 561 -30 inlet toggle-num;
 #X obj 562 -7 s \$0-toggle-num;
 #X obj 465 259 ctlout;
 #X msg 465 237 0 0 3;
 #X obj 465 215 delay 100;
 #X obj 465 195 loadbang;
+#X obj 16 602 r \$2-note;
 #X connect 0 0 25 0;
 #X connect 0 0 3 0;
 #X connect 1 0 3 1;
@@ -441,9 +441,9 @@
 #X connect 82 0 75 0;
 #X connect 83 0 84 0;
 #X connect 84 0 1 2;
-#X connect 85 0 39 0;
-#X connect 86 0 87 0;
+#X connect 85 0 86 0;
+#X connect 88 0 87 0;
 #X connect 89 0 88 0;
 #X connect 90 0 89 0;
-#X connect 91 0 90 0;
+#X connect 91 0 39 0;
 #X coords 0 -1 1 1 90 105 1 100 100;
