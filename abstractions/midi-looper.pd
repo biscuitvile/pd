@@ -337,6 +337,9 @@
 #X obj 465 215 delay 100;
 #X obj 465 195 loadbang;
 #X obj 16 602 r \$2-note;
+#X obj 348 290 r \$0-filename;
+#X obj 347 333 delay 100;
+#X msg 347 311 bang;
 #X connect 0 0 25 0;
 #X connect 0 0 3 0;
 #X connect 1 0 3 1;
@@ -409,4 +412,7 @@
 #X connect 87 0 86 0;
 #X connect 88 0 87 0;
 #X connect 89 0 37 0;
+#X connect 90 0 92 0;
+#X connect 91 0 73 0;
+#X connect 92 0 91 0;
 #X coords 0 -1 1 1 90 105 1 100 100;
