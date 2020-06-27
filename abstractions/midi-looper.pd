@@ -249,10 +249,10 @@
 #X obj 43 341 == 1;
 #X text 80 342 only allow events through in record state;
 #X text 133 384 retrigger loop every 1st beat;
-#N canvas 0 23 387 346 bpmtotempo 1;
+#N canvas 0 23 387 346 bpmtotempo 0;
 #X obj 12 12 inlet bpm;
 #X obj 51 57 s \$0-global-bpm;
-#X obj 64 123 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 64 123 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 64 79 r \$0-current-state;
 #X text 95 102 only allow loop bpm change when clear state;
@@ -368,6 +368,10 @@
 #X obj 16 602 r \$3-note;
 #X obj 561 -30 inlet toggle-num;
 #X obj 562 -7 s \$0-toggle-num;
+#X obj 465 259 ctlout;
+#X msg 465 237 0 0 3;
+#X obj 465 215 delay 100;
+#X obj 465 195 loadbang;
 #X connect 0 0 25 0;
 #X connect 0 0 3 0;
 #X connect 1 0 3 1;
@@ -439,4 +443,7 @@
 #X connect 84 0 1 2;
 #X connect 85 0 39 0;
 #X connect 86 0 87 0;
+#X connect 89 0 88 0;
+#X connect 90 0 89 0;
+#X connect 91 0 90 0;
 #X coords 0 -1 1 1 90 105 1 100 100;
