@@ -1,4 +1,4 @@
-#N canvas 663 38 1017 903 10;
+#N canvas 601 28 1017 903 10;
 #X obj 10 -14 inlet tick;
 #N canvas 205 473 750 458 statemachine 0;
 #X obj 172 15 inlet current-state;
@@ -288,17 +288,17 @@
 #X obj 22 64 loadbang;
 #X obj 10 161 change -1;
 #X obj 22 87 t b b;
-#X obj 16 624 spigot 1;
+#X obj 32 895 spigot 1;
 #X obj 362 -7 s \$0-mute;
-#X obj 120 587 r \$0-mute;
-#X obj 592 449 r \$0-current-state;
-#X obj 592 480 sel 0 1 2 3;
+#X obj 136 858 r \$0-mute;
+#X obj 604 514 r \$0-current-state;
+#X obj 604 545 sel 0 1 2 3;
 #X symbolatom 105 185 10 0 0 0 - #0-state-display -, f 10;
-#X msg 540 519 symbol clear;
-#X msg 567 544 symbol rec;
-#X msg 590 567 symbol play;
-#X msg 607 591 symbol stop;
-#X obj 565 634 s \$0-state-display;
+#X msg 552 584 symbol clear;
+#X msg 579 609 symbol rec;
+#X msg 602 632 symbol play;
+#X msg 619 656 symbol stop;
+#X obj 577 699 s \$0-state-display;
 #X obj 105 145 bng 15 250 50 0 \$0-toggle \$0-toggle-input rec/play
 17 7 0 10 -262144 -1 -1;
 #X obj 105 165 bng 15 250 50 0 \$0-clear \$0-clear-input clear 17 7
@@ -311,24 +311,24 @@
 #X obj 116 7 r \$0-toggle;
 #X obj 86 -34 r \$0-toggle-input;
 #X obj 229 -34 r \$0-clear-input;
-#X obj 16 648 unpack f f;
-#X obj 16 722 noteout;
+#X obj 32 919 unpack f f;
+#X obj 32 993 noteout;
 #X obj 362 -32 inlet mute;
-#X obj 120 609 == 0;
-#X obj 25 683 f;
-#X obj 120 630 sel 0;
-#X obj 120 658 t b 0;
-#X obj 162 631 r \$0-stop;
+#X obj 136 880 == 0;
+#X obj 41 954 f;
+#X obj 136 901 sel 0;
+#X obj 136 929 t b 0;
+#X obj 178 902 r \$0-stop;
 #X symbolatom 105 126 10 0 0 0 - #0-trackname #0-filename, f 10;
 #X obj 446 -30 inlet trackname;
 #X obj 446 -7 s \$0-trackname;
-#X obj 467 406 r \$0-filename;
-#X obj 413 421 symbol;
+#X obj 121 753 r \$0-filename;
+#X obj 65 768 symbol;
 #X obj 363 384 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 415 385 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X text 433 385 write;
+#X obj 65 741 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 83 741 write;
 #X text 381 385 read;
 #X obj 363 421 symbol;
 #N canvas 117 158 494 433 msfrombang 0;
@@ -360,7 +360,7 @@
 #X connect 10 0 6 0;
 #X connect 12 0 2 0;
 #X restore 670 88 pd msfrombang;
-#X obj 415 357 r SAVE;
+#X obj 44 549 r SAVE;
 #X obj 362 355 r LOAD;
 #X msg 266 99 2;
 #X obj 561 -30 inlet toggle-num;
@@ -369,44 +369,55 @@
 #X msg 465 237 0 0 3;
 #X obj 465 215 delay 100;
 #X obj 465 195 loadbang;
-#X obj 16 602 r \$2-note;
+#X obj 32 873 r \$2-note;
 #X obj 348 290 r \$0-filename;
 #X obj 347 333 delay 100;
 #X msg 347 311 bang;
-#X obj 366 609 file-exists;
-#X obj 365 556 r \$0-filename;
-#X obj 366 639 sel 1;
-#X obj 366 663 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 325 636 file-exists;
+#X obj 324 583 r \$0-filename;
+#X obj 325 666 sel 1;
+#X obj 325 690 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 393 662 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 352 689 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 265 121 r \$0-nav-to-clear;
 #X msg 265 142 0;
-#X obj 381 706 r \$0-is-playing;
-#X obj 366 727 f;
-#X obj 366 751 sel 1;
-#X obj 366 775 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 340 733 r \$0-is-playing;
+#X obj 325 754 f;
+#X obj 325 778 sel 1;
+#X obj 325 802 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 393 774 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 352 801 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 393 801 s \$0-nav-to-stop;
+#X obj 352 828 s \$0-nav-to-stop;
 #X obj 265 164 r \$0-nav-to-stop;
 #X msg 265 185 3;
-#X obj 393 683 s \$0-nav-to-clear;
+#X obj 352 710 s \$0-nav-to-clear;
 #X msg 276 462 read ../memory/\$1.txt;
-#X msg 277 488 write ../memory/\$1.txt;
-#X msg 366 582 ../memory/\$1.txt;
-#X obj 830 530 r PLAY-ALL;
-#X obj 830 626 file-exists;
-#X obj 863 550 r \$0-filename;
-#X obj 830 656 sel 1;
-#X obj 830 680 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X msg 65 791 write ../memory/\$1.txt;
+#X msg 325 609 ../memory/\$1.txt;
+#X obj 842 525 r PLAY-ALL;
+#X obj 842 621 file-exists;
+#X obj 875 545 r \$0-filename;
+#X obj 842 651 sel 1;
+#X obj 842 675 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X msg 830 599 ../memory/\$1.txt;
-#X obj 830 575 symbol;
-#X obj 366 821 s \$0-play;
-#X obj 830 701 s \$0-play;
+#X msg 842 594 ../memory/\$1.txt;
+#X obj 842 570 symbol;
+#X obj 325 848 s \$0-play;
+#X obj 842 696 s \$0-play;
 #X obj 266 78 r \$0-play;
+#X floatatom 37 695 5 0 0 0 - - -, f 5;
+#X msg 45 631 next;
+#X obj 408 407 r \$0-filename;
+#X obj 42 652 r \$0-filename;
+#X msg 42 675 0;
+#X msg 71 613 rewind;
+#X obj 44 570 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 44 592 t b b;
+#X obj 37 716 sel 0;
+#X text 81 716 0 when qlist is empty;
 #X connect 0 0 25 0;
 #X connect 0 0 3 0;
 #X connect 1 0 3 1;
@@ -418,6 +429,7 @@
 #X connect 6 1 16 0;
 #X connect 6 2 17 0;
 #X connect 6 3 18 0;
+#X connect 7 0 119 0;
 #X connect 8 0 7 0;
 #X connect 11 0 12 0;
 #X connect 11 0 15 0;
@@ -463,12 +475,11 @@
 #X connect 65 0 64 0;
 #X connect 67 0 68 0;
 #X connect 69 0 70 1;
-#X connect 69 0 75 1;
 #X connect 70 0 107 0;
 #X connect 71 0 75 0;
 #X connect 72 0 70 0;
 #X connect 75 0 106 0;
-#X connect 77 0 72 0;
+#X connect 77 0 125 0;
 #X connect 78 0 71 0;
 #X connect 79 0 1 2;
 #X connect 80 0 81 0;
@@ -506,4 +517,14 @@
 #X connect 114 0 110 0;
 #X connect 115 0 114 0;
 #X connect 118 0 79 0;
+#X connect 119 0 127 0;
+#X connect 120 0 7 0;
+#X connect 121 0 75 1;
+#X connect 122 0 123 0;
+#X connect 123 0 119 0;
+#X connect 124 0 7 0;
+#X connect 125 0 126 0;
+#X connect 126 0 120 0;
+#X connect 126 1 124 0;
+#X connect 127 1 72 0;
 #X coords 0 -1 1 1 90 105 1 100 100;
