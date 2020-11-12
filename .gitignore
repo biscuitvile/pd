@@ -1,4 +1,7 @@
 .DS_STORE
 samples/*
-memory/*
+memory/audio/*
+memory/midi/*
+memory/samples/*
+memory/settings/*
 audio/*
