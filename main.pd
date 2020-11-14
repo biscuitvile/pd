@@ -333,7 +333,7 @@
 #X connect 74 0 0 1;
 #X coords 0 -1 1 1 140 995 1 100 100;
 #X restore 465 -328 pd track-2;
-#N canvas 0 50 1464 854 track-3 0;
+#N canvas 0 50 1464 854 track-3 1;
 #X obj 110 1025 channel-out~;
 #X obj 110 885 cosine-pan~;
 #X obj 110 770 reverb~;
@@ -410,11 +410,11 @@
 #X obj 387 903 midi-toggle 46 2;
 #X obj 226 -21 r SAVE;
 #X msg 580 9 3;
-#X msg 588 987 volume 45 \, mute 45 \, encooder-channel 1 \, toggle-chanbnel
-2;
 #X msg 953 993 volume 0.5 \, mute 0 \, on-color 40 \, off-color 0;
 #X obj 110 129 looper-new~;
 #X obj 588 1008 channel-out-control track-3-out;
+#X msg 588 987 volume 45 \, mute 45 \, encoder-channel 1 \, toggle-channel
+2;
 #X connect 0 0 47 0;
 #X connect 0 1 48 0;
 #X connect 1 0 0 0;
@@ -422,7 +422,7 @@
 #X connect 1 1 0 2;
 #X connect 1 1 59 3;
 #X connect 2 0 1 0;
-#X connect 3 0 72 0;
+#X connect 3 0 71 0;
 #X connect 4 0 2 0;
 #X connect 5 0 4 0;
 #X connect 6 0 20 0;
@@ -436,7 +436,7 @@
 #X connect 14 0 36 0;
 #X connect 15 0 37 0;
 #X connect 16 0 38 0;
-#X connect 17 0 71 0;
+#X connect 17 0 74 0;
 #X connect 18 0 33 0;
 #X connect 19 0 21 0;
 #X connect 20 0 27 1;
@@ -447,11 +447,11 @@
 #X connect 25 0 4 1;
 #X connect 26 0 2 1;
 #X connect 27 0 1 1;
-#X connect 28 0 73 1;
-#X connect 29 0 73 2;
-#X connect 30 0 73 3;
-#X connect 31 0 73 5;
-#X connect 32 0 73 4;
+#X connect 28 0 72 1;
+#X connect 29 0 72 2;
+#X connect 30 0 72 3;
+#X connect 31 0 72 5;
+#X connect 32 0 72 4;
 #X connect 33 0 61 0;
 #X connect 34 0 60 0;
 #X connect 35 0 24 0;
@@ -462,11 +462,11 @@
 #X connect 40 0 42 0;
 #X connect 41 0 65 0;
 #X connect 42 0 62 0;
-#X connect 43 0 73 4;
+#X connect 43 0 72 4;
 #X connect 44 0 39 0;
 #X connect 45 0 46 0;
 #X connect 46 0 70 0;
-#X connect 46 0 73 7;
+#X connect 46 0 72 7;
 #X connect 49 0 52 0;
 #X connect 49 1 51 0;
 #X connect 50 0 53 0;
@@ -485,16 +485,16 @@
 #X connect 63 0 61 1;
 #X connect 64 0 60 1;
 #X connect 65 0 62 1;
-#X connect 66 0 73 0;
+#X connect 66 0 72 0;
 #X connect 67 0 57 0;
 #X connect 68 0 58 0;
-#X connect 69 0 73 6;
-#X connect 70 0 73 8;
-#X connect 71 0 74 0;
-#X connect 72 0 74 1;
-#X connect 73 0 56 0;
-#X connect 73 1 49 0;
-#X connect 74 0 0 1;
+#X connect 69 0 72 6;
+#X connect 70 0 72 8;
+#X connect 71 0 73 1;
+#X connect 72 0 56 0;
+#X connect 72 1 49 0;
+#X connect 73 0 0 1;
+#X connect 74 0 73 0;
 #X coords 0 -1 1 1 140 995 1 100 100;
 #X restore 610 -328 pd track-3;
 #X obj -89 -175 s defaults;
