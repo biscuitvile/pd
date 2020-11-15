@@ -1,0 +1,27 @@
+#N canvas 5 23 1292 932 10;
+#X obj 528 195 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 529 246 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 528 221 metro 2000;
+#X obj 529 270 s bangs;
+#X obj 246 172 r bangs;
+#X obj 246 194 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 293 224 spigot;
+#X obj 326 196 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 324 124 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 293 252 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 312 251 next bang;
+#X connect 0 0 2 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 6 0 9 0;
+#X connect 7 0 6 1;
+#X connect 8 0 7 0;
+#X connect 9 0 7 0;
