@@ -35,8 +35,9 @@
 #X obj 416 402 outlet false;
 #X obj 416 382 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 167 185 - 500;
-#X obj 215 185 + 500;
+#X obj 167 185 - 24000;
+#X obj 215 185 + 24000;
+#X text 268 185 500ms times 48 audio rate;
 #X connect 0 0 5 0;
 #X connect 1 0 4 0;
 #X connect 2 0 3 0;
