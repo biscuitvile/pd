@@ -1,0 +1,29 @@
+#N canvas 803 435 653 593 10;
+#X obj 274 243 cyclone/seq;
+#X msg 243 193 record;
+#X msg 360 195 stop;
+#X obj 242 124 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 262 124 record;
+#X obj 242 152 sel 1;
+#X msg 312 195 start;
+#X obj 311 167 t b b;
+#X obj 337 270 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 192 211 midiin;
+#X obj 274 287 midiout;
+#X obj 241 96 midi-toggle 0 2;
+#X obj 86 17 midi-thru;
+#X connect 0 0 10 0;
+#X connect 0 1 8 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 5 0;
+#X connect 5 0 1 0;
+#X connect 5 1 7 0;
+#X connect 6 0 0 0;
+#X connect 7 0 6 0;
+#X connect 7 1 2 0;
+#X connect 8 0 6 0;
+#X connect 9 0 0 0;
+#X connect 11 0 3 0;
