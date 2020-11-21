@@ -592,7 +592,7 @@
 #X obj 7 110 r initialize;
 #X msg 134 136 volume 0;
 #X msg 8 131 volume 6 \, channel 1;
-#X obj 733 -522 midi-observer;
+#X obj 863 -522 midi-observer;
 #X obj 366 -523 midi-thru;
 #X obj 473 -499 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -758,6 +758,10 @@
 #X restore 1235 -328 pd track-4;
 #X obj 7 151 channel-out-control;
 #X obj -86 171 channel-out~;
+#X obj 742 -479 s RECORD-ALL;
+#X obj 742 -524 midi-toggle 64 2;
+#X obj 742 -502 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
 #X connect 0 0 1 0;
 #X connect 0 0 2 0;
 #X connect 3 0 1 0;
@@ -794,3 +798,5 @@
 #X connect 38 0 39 0;
 #X connect 39 0 40 0;
 #X connect 47 0 48 1;
+#X connect 50 0 51 0;
+#X connect 51 0 49 0;
