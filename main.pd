@@ -753,6 +753,7 @@
 #X connect 38 1 29 0;
 #X connect 39 0 37 0;
 #X connect 40 0 38 0;
+#X connect 40 0 38 2;
 #X coords 0 -1 1 1 400 650 1 100 100;
 #X restore 1235 -328 pd track-4;
 #X obj 7 151 channel-out-control;
