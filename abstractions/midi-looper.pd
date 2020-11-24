@@ -1,4 +1,4 @@
-#N canvas 601 28 1017 903 10;
+#N canvas 1521 126 1017 903 10;
 #X obj 10 -14 inlet tick;
 #N canvas 205 473 750 458 statemachine 0;
 #X obj 172 15 inlet current-state;
@@ -201,7 +201,7 @@
 #X floatatom 749 185 5 0 0 0 loop_length_beats #0-loop-length -, f
 5;
 #X floatatom 749 209 5 0 0 0 current_beat #0-current-beat -, f 5;
-#N canvas 770 522 723 468 beatcounter 0;
+#N canvas 115 637 723 468 beatcounter 0;
 #X obj 10 193 f 0;
 #X obj 42 193 + 1;
 #X obj 10 139 spigot;
@@ -222,7 +222,7 @@
 #X obj 43 118 == 1;
 #X floatatom 75 193 5 0 0 0 - - -, f 5;
 #X obj 203 205 r \$0-loop-length;
-#X obj 204 224 midi-number-state-settings \$2-loop-length;
+#X obj 204 224 number-state-settings \$2-loop-length;
 #X connect 0 0 1 0;
 #X connect 1 0 0 1;
 #X connect 1 0 3 0;
@@ -344,7 +344,7 @@
 #X obj 13 27 r \$0-startcounter;
 #X obj 66 50 r \$0-stopcounter;
 #X text 12 7 counter for measuring delay between bangs;
-#X obj 130 208 midi-number-state-settings \$3-time-delta;
+#X obj 130 208 number-state-settings \$2-time-delta;
 #X connect 0 0 1 1;
 #X connect 1 0 0 0;
 #X connect 1 0 2 0;
