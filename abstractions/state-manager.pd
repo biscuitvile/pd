@@ -1,4 +1,5 @@
 #N canvas 309 308 770 637 10;
+#X declare -stdpath zexy -stdlib zexy;
 #X obj 393 504 textfile;
 #X obj 393 534 s SSSAD;
 #X obj 393 446 until;
@@ -50,6 +51,10 @@
 #X msg 306 68 symbol ../memory/settings;
 #X msg 393 354 \$2/\$1.txt;
 #X msg 36 301 \$2/\$1.txt;
+#X obj 4 36 l2s;
+#X obj 451 164 declare -stdpath zexy -stdlib zexy;
+#X text 449 180 can get rid of this when the l2s is cleaned up and
+the filenames can be floats;
 #X connect 0 0 1 0;
 #X connect 0 1 2 1;
 #X connect 0 1 5 0;
@@ -84,7 +89,7 @@
 #X connect 27 0 30 0;
 #X connect 30 0 26 0;
 #X connect 31 0 24 0;
-#X connect 32 0 27 0;
+#X connect 32 0 48 0;
 #X connect 33 0 25 0;
 #X connect 34 0 23 0;
 #X connect 35 0 26 1;
@@ -100,4 +105,5 @@
 #X connect 46 0 8 0;
 #X connect 46 0 36 0;
 #X connect 47 0 21 0;
+#X connect 48 0 27 0;
 #X coords 0 -1 1 1 120 100 1 100 100;
