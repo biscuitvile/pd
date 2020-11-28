@@ -705,6 +705,7 @@ channel 2 \, track-number 1;
 #X connect 23 0 16 0;
 #X connect 24 0 25 0;
 #X connect 25 0 43 0;
+#X connect 25 0 43 2;
 #X connect 26 0 28 0;
 #X connect 27 0 47 0;
 #X connect 28 0 49 1;
