@@ -1,0 +1,8 @@
+#!/bin/bash
+
+bank_from=$1
+
+rm audio/$bank_from-{1..4}.wav
+rm memory/settings/$bank_from.txt
+rm memory/midi/$bank_from-{1..4}.txt
+rm memory/audio/$bank_from-{1..4}.wav.txt
