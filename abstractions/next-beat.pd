@@ -1,0 +1,36 @@
+#N canvas 643 321 480 427 10;
+#X obj 148 224 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 201 250 spigot;
+#X obj 234 222 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 77 44 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 201 278 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 148 202 r TEMPO;
+#X obj 201 329 outlet;
+#X obj 76 9 inlet;
+#X obj 99 64 r TIMING;
+#X obj 78 86 == 0;
+#X obj 78 111 sel 1;
+#X text 133 96 if no timing is set just pass the bang through;
+#X text 220 277 otherwise wait for next beat;
+#X obj 78 134 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 106 134 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 2 0 1 1;
+#X connect 3 0 9 0;
+#X connect 4 0 2 0;
+#X connect 4 0 6 0;
+#X connect 5 0 0 0;
+#X connect 7 0 3 0;
+#X connect 8 0 9 1;
+#X connect 9 0 10 0;
+#X connect 10 0 13 0;
+#X connect 10 1 14 0;
+#X connect 13 0 6 0;
+#X connect 14 0 2 0;
