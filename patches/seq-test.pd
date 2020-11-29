@@ -6,7 +6,7 @@
 1;
 #X obj 374 345 loadbang;
 #X obj 426 446 nbx 7 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--228856 -1 -1 20.0556 256;
+-228856 -1 -1 0 256;
 #X text 501 439 tick time in ms, f 9;
 #X obj 375 538 cyclone/seq;
 #X obj 223 417 midiin;
@@ -41,6 +41,15 @@
 #X obj 319 311 cyclone/midiformat;
 #X msg 319 291 0 0;
 #X obj 440 585 t b b;
+#X obj 17 -66 midi-button 6 2;
+#X obj 148 121 r initialize;
+#X msg 149 142 volume 6 \, encoder-channel 1;
+#X obj 148 162 channel-out-control metronome;
+#X msg 331 148 volume 0.75;
+#X obj 334 203 midi-toggle 0 2;
+#X obj 332 128 loadbang;
+#X obj 533 112 adc~;
+#X obj 533 148 dac~;
 #X connect 0 0 7 0;
 #X connect 1 0 2 0;
 #X connect 2 0 7 0;
@@ -76,3 +85,12 @@
 #X connect 36 0 35 0;
 #X connect 37 0 0 0;
 #X connect 37 1 19 0;
+#X connect 38 0 10 0;
+#X connect 39 0 40 0;
+#X connect 40 0 41 0;
+#X connect 41 0 14 1;
+#X connect 42 0 41 1;
+#X connect 43 0 22 0;
+#X connect 44 0 42 0;
+#X connect 45 0 46 0;
+#X connect 45 1 46 1;
