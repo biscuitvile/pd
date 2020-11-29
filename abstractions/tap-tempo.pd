@@ -1,4 +1,4 @@
-#N canvas 231 158 947 694 10;
+#N canvas 43 158 947 694 10;
 #X obj 201 94 sel 1 2;
 #X floatatom 207 176 5 0 0 0 - - -, f 5;
 #X msg 200 144 1;
@@ -12,24 +12,40 @@
 -1 -1;
 #X msg 202 40 1;
 #X obj 207 201 sel 1 0;
-#X floatatom 207 252 5 0 0 0 - - -, f 5;
+#X floatatom 207 272 5 0 0 0 - - -, f 5;
 #X obj 165 140 bng 15 250 50 0 empty \$0-tempo empty 0 -6 0 10 -262144
 -1 -1;
-#X msg 100 291 1;
-#X obj 100 270 loadbang;
-#X obj 107 317 metro 500;
-#X text 246 252 time passed between two clicks (in ms.);
+#X msg 142 429 1;
+#X obj 142 408 loadbang;
+#X obj 159 458 metro 500;
+#X text 246 272 time passed between two clicks (in ms.);
 #X obj 202 15 r \$0-tap;
-#X obj 107 339 s \$0-tempo;
-#X obj 132 445 outlet;
-#X obj 132 423 r \$0-tempo;
-#X obj 275 230 inlet ms;
-#X obj 275 442 outlet ms;
+#X obj 159 570 s \$0-tempo;
+#X obj 19 656 outlet;
+#X obj 19 634 r \$0-tempo;
+#X obj 412 147 inlet ms;
+#X obj 373 665 outlet ms;
 #X obj 104 59 inlet bang;
-#X obj 262 301 == 0;
-#X obj 262 323 sel 1;
-#X msg 262 344 0;
-#X msg 293 344 1;
+#X obj 262 321 == 0;
+#X obj 262 343 sel 1;
+#X msg 262 364 0;
+#X msg 293 364 1;
+#X obj 673 344 sel 248 250 251 252;
+#X text 716 433 continue;
+#X text 749 399 stop;
+#X text 690 463 start;
+#X obj 699 447 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 728 416 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 757 380 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 673 315 midirealtimein;
+#X obj 159 522 spigot 1;
+#X msg 204 499 1;
+#X msg 236 499 0;
+#X text 553 500 disable tap tempo output if there is an external clock
+;
 #X connect 0 0 2 0;
 #X connect 0 1 4 0;
 #X connect 1 0 11 0;
@@ -50,7 +66,7 @@
 #X connect 12 0 25 0;
 #X connect 14 0 16 0;
 #X connect 15 0 14 0;
-#X connect 16 0 19 0;
+#X connect 16 0 37 0;
 #X connect 18 0 10 0;
 #X connect 21 0 20 0;
 #X connect 22 0 12 0;
@@ -60,4 +76,14 @@
 #X connect 26 1 28 0;
 #X connect 27 0 16 0;
 #X connect 28 0 16 0;
+#X connect 29 1 33 0;
+#X connect 29 2 34 0;
+#X connect 29 3 35 0;
+#X connect 33 0 39 0;
+#X connect 34 0 39 0;
+#X connect 35 0 38 0;
+#X connect 36 0 29 0;
+#X connect 37 0 19 0;
+#X connect 38 0 37 1;
+#X connect 39 0 37 1;
 #X coords 0 -1 1 1 85 60 1 100 100;
