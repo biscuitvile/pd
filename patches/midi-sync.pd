@@ -1,0 +1,61 @@
+#N canvas 587 118 697 524 10;
+#X obj 163 26 midirealtimein;
+#X obj 201 207 + 1;
+#X obj 163 207 f;
+#X obj 163 97 == 248;
+#X obj 190 156 del 500;
+#X msg 190 179 0;
+#X obj 163 129 t b b;
+#X text 220 176 < resets counter to 0;
+#X obj 172 273 sel 0;
+#X obj 172 240 mod 24;
+#X obj 171 308 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text -47 -52 This is the simplest method to grab midiclock. There's
+probably better methods of resetting the counter but this works for
+most purposes. Hope it helps!;
+#X text 325 67 http://www.pdpatchrepo.info/hurleur/midisync_in.pd;
+#X obj 329 302 sel 248 250 251 252;
+#X text 372 391 continue;
+#X text 405 357 stop;
+#X text 346 421 start;
+#X obj 171 330 metronome;
+#X obj 171 396 channel-out~;
+#X obj 282 360 loadbang;
+#X msg 282 380 volume 0.8;
+#X obj 355 405 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 384 374 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 413 338 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 500 140 adc~;
+#X obj 501 177 channel-out~;
+#X obj 624 141 loadbang;
+#X msg 624 161 volume 1;
+#X obj 41 114 midiout;
+#X connect 0 0 3 0;
+#X connect 0 0 13 0;
+#X connect 0 0 28 0;
+#X connect 1 0 2 1;
+#X connect 2 0 1 0;
+#X connect 2 0 9 0;
+#X connect 3 0 6 0;
+#X connect 4 0 5 0;
+#X connect 5 0 2 1;
+#X connect 6 0 2 0;
+#X connect 6 1 4 0;
+#X connect 8 0 10 0;
+#X connect 9 0 8 0;
+#X connect 10 0 17 0;
+#X connect 13 1 21 0;
+#X connect 13 2 22 0;
+#X connect 13 3 23 0;
+#X connect 17 0 18 0;
+#X connect 17 0 18 2;
+#X connect 19 0 20 0;
+#X connect 20 0 18 1;
+#X connect 24 0 25 0;
+#X connect 24 0 25 2;
+#X connect 26 0 27 0;
+#X connect 27 0 25 1;
