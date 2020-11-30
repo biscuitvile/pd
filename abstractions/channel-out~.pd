@@ -2,8 +2,8 @@
 #X obj 35 337 *~;
 #X msg 128 299 \$1 20;
 #X obj 128 319 line~;
-#X obj 198 110 vsl 15 40 0.01 1 0 0 \$0-volume \$0-in-volume empty
--20 5 0 10 -262144 -1 -1 1930 1;
+#X obj 198 110 vsl 15 40 0 1 0 0 \$0-volume \$0-in-volume empty -20
+5 0 10 -262144 -1 -1 0 1;
 #X obj 105 140 tgl 15 0 \$0-mute \$0-in-mute empty -4 -6 0 10 -262144
 -1 -1 0 1;
 #X obj 35 379 *~;
