@@ -617,7 +617,7 @@ channel 2 \, track-number 1;
 #X obj 224 759 s~ track-4-right;
 #X obj 310 423 sample-recorder~;
 #X obj 354 373 adc~;
-#X obj 366 396 midi-toggle 59 2;
+#X obj 361 397 midi-toggle 59 2;
 #X msg 589 651 volume 0.8 \, mute 0 \, on-color 100 \, off-color 0
 ;
 #X obj 240 666 channel-out-control track-4-out;
@@ -635,7 +635,7 @@ channel 2 \, track-number 1;
 #X msg 663 535 rec 0 \, monitor 1 \, on-color 100 \, off-color 0;
 #X obj 283 551 looper-control track-4-looper;
 #X obj 111 566 looper~;
-#X connect 0 0 3 0;
+#X connect 0 1 3 0;
 #X connect 1 0 2 0;
 #X connect 2 0 37 0;
 #X connect 3 0 1 0;
