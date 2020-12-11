@@ -1,0 +1,21 @@
+#N canvas 304 71 684 530 10;
+#X obj 482 23 midi-thru;
+#X obj 489 244 s PLAY-ALL;
+#X obj 489 218 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 113 48 track-number 4 \, bank 1;
+#X msg 115 207 track-number 1 \, bank 1;
+#X msg 114 376 track-number 2 \, bank 1;
+#X obj 113 28 loadbang;
+#X obj 115 188 loadbang;
+#X obj 114 356 loadbang;
+#X obj 30 72 midi-looper~;
+#X obj 32 229 midi-looper~;
+#X obj 31 395 midi-looper~;
+#X connect 2 0 1 0;
+#X connect 3 0 9 1;
+#X connect 4 0 10 1;
+#X connect 5 0 11 1;
+#X connect 6 0 3 0;
+#X connect 7 0 4 0;
+#X connect 8 0 5 0;
