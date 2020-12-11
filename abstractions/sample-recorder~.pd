@@ -1,4 +1,4 @@
-#N canvas 137 37 1536 942 10;
+#N canvas 0 23 1440 855 10;
 #X obj 268 24 inlet~;
 #X obj 268 45 s~ \$0-input-right;
 #X obj 187 24 inlet;
@@ -79,6 +79,7 @@
 #X obj 243 364 f;
 #X obj 102 512 f;
 #X obj 1100 612 delay 100;
+#X obj 187 678 delay 100;
 #X connect 0 0 1 0;
 #X connect 2 0 3 0;
 #X connect 4 0 5 0;
@@ -89,7 +90,7 @@
 #X connect 10 0 74 1;
 #X connect 11 0 13 0;
 #X connect 12 0 14 0;
-#X connect 13 1 9 0;
+#X connect 13 1 76 0;
 #X connect 14 0 74 0;
 #X connect 15 0 25 0;
 #X connect 18 0 17 0;
@@ -150,4 +151,5 @@
 #X connect 74 0 8 0;
 #X connect 74 0 10 0;
 #X connect 75 0 67 0;
+#X connect 76 0 9 0;
 #X coords 0 -1 1 1 110 60 1 100 100;
