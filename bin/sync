@@ -5,5 +5,3 @@ rsync -a --progress pi@julia.local:/home/pi/pd/samples/ samples
 
 rsync -a --progress pi@julia.local:/home/pi/pd/memory/settings/ memory/settings
 rsync -a --progress pi@julia.local:/home/pi/pd/memory/midi/ memory/midi
-rsync -a --progress pi@julia.local:/home/pi/pd/memory/audio/ memory/audio
-rsync -a --progress pi@julia.local:/home/pi/pd/memory/samples/ memory/samples
