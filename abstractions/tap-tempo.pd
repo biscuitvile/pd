@@ -8,24 +8,22 @@
 #X obj 204 68 +;
 #X floatatom 232 70 5 0 0 0 - - -, f 5;
 #X obj 207 228 timer;
-#X obj 105 140 bng 15 250 50 0 \$0-tap empty empty 0 -6 0 10 -4034
+#X obj 105 140 bng 15 250 50 0 \$0-tap empty empty 0 -6 0 10 -262144
 -1 -1;
 #X msg 202 40 1;
 #X obj 207 201 sel 1 0;
 #X floatatom 207 252 5 0 0 0 - - -, f 5;
-#X obj 165 140 bng 15 250 50 0 empty \$0-tempo empty 0 -6 0 10 -262144
--1 -1;
-#X msg 149 249 1;
-#X obj 149 228 loadbang;
-#X obj 156 275 metro 500;
 #X text 246 252 time passed between two clicks (in ms.);
 #X obj 202 15 r \$0-tap;
-#X obj 156 297 s \$0-tempo;
-#X obj 132 385 outlet;
-#X obj 132 363 r \$0-tempo;
-#X obj 275 230 inlet ms;
-#X obj 275 382 outlet ms;
 #X obj 104 59 inlet bang;
+#X obj 207 357 outlet bpm;
+#X obj 207 278 expr 60000 / $f1;
+#X floatatom 207 304 5 0 0 0 - - -, f 5;
+#X floatatom 148 141 5 0 0 0 - #0-bpm -, f 5;
+#X obj 318 345 s \$0-bpm;
+#X obj 207 330 i;
+#X obj 139 267 loadbang;
+#X msg 139 289 120;
 #X connect 0 0 2 0;
 #X connect 0 1 4 0;
 #X connect 1 0 11 0;
@@ -41,13 +39,13 @@
 #X connect 10 0 6 0;
 #X connect 11 0 8 0;
 #X connect 11 1 8 1;
-#X connect 12 0 16 1;
-#X connect 12 0 23 0;
-#X connect 14 0 16 0;
-#X connect 15 0 14 0;
-#X connect 16 0 19 0;
-#X connect 18 0 10 0;
+#X connect 12 0 17 0;
+#X connect 14 0 10 0;
+#X connect 15 0 9 0;
+#X connect 17 0 18 0;
+#X connect 18 0 21 0;
+#X connect 21 0 16 0;
 #X connect 21 0 20 0;
-#X connect 22 0 12 0;
-#X connect 24 0 9 0;
+#X connect 22 0 23 0;
+#X connect 23 0 18 0;
 #X coords 0 -1 1 1 85 60 1 100 100;
