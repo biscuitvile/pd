@@ -478,17 +478,32 @@ channel 2 \, track-number 1;
 #X msg 173 367 ../memory/settings/\$1.txt;
 #X obj 359 108 r \$0-initial-bank;
 #X obj 200 440 delay 100;
-#X obj 106 121 bng 15 250 50 0 empty empty + 17 7 0 10 -262144 -1 -1
+#X obj 106 141 bng 15 250 50 0 empty empty + 17 7 0 10 -262144 -1 -1
 ;
-#X obj 146 121 bng 15 250 50 0 empty empty - 17 7 0 10 -262144 -1 -1
+#X obj 146 141 bng 15 250 50 0 empty empty - 17 7 0 10 -262144 -1 -1
 ;
-#X floatatom 106 141 5 0 0 0 - - -, f 5;
+#X floatatom 106 161 5 0 0 0 - - -, f 5;
 #X obj 365 212 sel 0;
 #X msg 473 163 1;
 #X msg 437 164 100;
 #X obj 425 213 sel 101;
 #X obj 425 236 delay 100;
 #X obj 365 236 delay 100;
+#X floatatom 546 527 5 0 0 0 - - -, f 5;
+#X obj 546 445 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 546 480 int;
+#X obj 603 601 file-exists;
+#X obj 603 624 sel 0;
+#X obj 461 577 s \$0-initial-bank;
+#X msg 603 577 ../memory/settings/\$1.txt;
+#X obj 630 650 delay 100;
+#X msg 468 465 100;
+#X obj 582 481 - 1;
+#X obj 146 122 bng 15 250 50 0 empty empty btm 17 7 0 10 -262144 -1
+-1;
+#X obj 106 122 bng 15 250 50 0 empty empty top 17 7 0 10 -262144 -1
+-1;
 #X connect 0 0 2 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
@@ -521,8 +536,21 @@ channel 2 \, track-number 1;
 #X connect 26 0 27 0;
 #X connect 27 0 24 0;
 #X connect 28 0 25 0;
-#X coords 0 -1 1 1 85 60 1 100 100;
-#X restore -89 -389 pd navigation;
+#X connect 29 0 35 0;
+#X connect 29 0 34 0;
+#X connect 30 0 31 0;
+#X connect 31 0 29 0;
+#X connect 31 0 38 0;
+#X connect 32 0 33 0;
+#X connect 33 1 36 0;
+#X connect 35 0 32 0;
+#X connect 36 0 30 0;
+#X connect 37 0 31 0;
+#X connect 38 0 31 1;
+#X connect 39 0 37 0;
+#X connect 40 0 15 0;
+#X coords 0 -1 1 1 85 80 1 100 100;
+#X restore -89 -409 pd navigation;
 #X obj 126 -286 s SAVE;
 #X obj -81 -319 s BANK;
 #X obj -88 -26 tap-tempo;
