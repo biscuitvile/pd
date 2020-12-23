@@ -1,7 +1,7 @@
 #!/bin/bash
 
-rsync -a --progress pi@julia.local:/home/pi/pd/audio/ audio
-rsync -a --progress pi@julia.local:/home/pi/pd/samples/ samples
+rsync -a --progress pi@julia.local:/home/pi/pd/audio/ audio --delete
+rsync -a --progress pi@julia.local:/home/pi/pd/samples/ samples --delete
 
-rsync -a --progress pi@julia.local:/home/pi/pd/memory/settings/ memory/settings
-rsync -a --progress pi@julia.local:/home/pi/pd/memory/midi/ memory/midi
+rsync -a --progress pi@julia.local:/home/pi/pd/memory/settings/ memory/settings --delete
+rsync -a --progress pi@julia.local:/home/pi/pd/memory/midi/ memory/midi --delete
