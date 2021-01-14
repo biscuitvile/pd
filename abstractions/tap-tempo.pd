@@ -22,8 +22,10 @@
 #X floatatom 148 141 5 0 0 0 - #0-bpm -, f 5;
 #X obj 318 345 s \$0-bpm;
 #X obj 207 330 i;
-#X obj 139 267 loadbang;
 #X msg 139 289 120;
+#X obj 559 291 inlet bpm;
+#X obj 61 274 r defaults;
+#X obj 139 267 loadbang;
 #X connect 0 0 2 0;
 #X connect 0 1 4 0;
 #X connect 1 0 11 0;
@@ -46,6 +48,8 @@
 #X connect 18 0 21 0;
 #X connect 21 0 16 0;
 #X connect 21 0 20 0;
-#X connect 22 0 23 0;
+#X connect 22 0 18 0;
 #X connect 23 0 18 0;
+#X connect 24 0 22 0;
+#X connect 25 0 22 0;
 #X coords 0 -1 1 1 85 60 1 100 100;
