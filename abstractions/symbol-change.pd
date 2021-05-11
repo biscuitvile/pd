@@ -1,0 +1,9 @@
+#N canvas 1900 387 450 300 10;
+#X obj 135 98 t s s;
+#X obj 137 125 sel placeholder;
+#X obj 225 152 outlet;
+#X obj 134 67 inlet;
+#X connect 0 0 1 1;
+#X connect 0 1 1 0;
+#X connect 1 1 2 0;
+#X connect 3 0 0 0;
