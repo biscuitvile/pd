@@ -1,4 +1,4 @@
-#N canvas 418 198 450 300 10;
+#N canvas 506 298 450 300 10;
 #X obj 75 159 &&;
 #X obj 42 181 spigot;
 #X obj 75 130 ==;
@@ -14,14 +14,13 @@
 #X obj 99 83 r \$0-control;
 #X obj 182 84 r \$0-channel;
 #X obj 112 130 ==;
-#X msg 41 233 127;
-#X obj 41 205 sel 127;
-#X obj 41 260 outlet;
-#X obj 42 84 notein;
-#X obj 129 264 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 42 260 outlet;
+#X obj 36 67 notein;
+#X obj 42 223 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 8 141 delay 5;
 #X connect 0 0 1 1;
-#X connect 1 0 16 0;
+#X connect 1 0 17 0;
 #X connect 2 0 0 0;
 #X connect 3 0 6 0;
 #X connect 4 0 5 0;
@@ -32,9 +31,8 @@
 #X connect 12 0 2 1;
 #X connect 13 0 14 1;
 #X connect 14 0 0 1;
-#X connect 15 0 17 0;
-#X connect 15 0 19 0;
-#X connect 16 0 15 0;
-#X connect 18 0 2 0;
-#X connect 18 1 1 0;
-#X connect 18 2 14 0;
+#X connect 16 0 2 0;
+#X connect 16 1 18 0;
+#X connect 16 2 14 0;
+#X connect 17 0 15 0;
+#X connect 18 0 1 0;
