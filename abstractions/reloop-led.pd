@@ -9,6 +9,7 @@
 #X obj 82 145 \$2;
 #X obj 17 160 noteout;
 #X obj 82 126 loadbang;
+#X obj 315 15 inlet;
 #X connect 0 0 8 1;
 #X connect 1 0 8 1;
 #X connect 2 0 3 0;
@@ -21,3 +22,4 @@
 #X connect 6 0 8 0;
 #X connect 7 0 8 2;
 #X connect 9 0 7 0;
+#X connect 10 0 0 1;
