@@ -1,0 +1,13 @@
+#N canvas 0 25 450 300 10;
+#X obj 46 42 pack f s s;
+#X obj 46 10 inlet;
+#X obj 93 11 inlet;
+#X obj 136 11 inlet;
+#X obj 46 91 outlet;
+#X text 101 92 to soundfiler;
+#X msg 46 64 read -resize ../samples/\$1.wav \$2 \$3;
+#X connect 0 0 6 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 1;
+#X connect 3 0 0 2;
+#X connect 6 0 4 0;
