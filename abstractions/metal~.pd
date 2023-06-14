@@ -1,9 +1,7 @@
 #N canvas 382 25 1058 847 10;
 #X declare -lib zexy;
 #X obj 245 202 demultiplex~;
-#X obj 198 118 tgl 15 0 \$0-toggle \$0-in-toggle empty 17 7 0 10 -262144
--1 -1 0 1;
-#X obj 245 309 outlet~;
+#X obj 198 118 tgl 15 0 \$0-toggle \$0-in-toggle empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 245 129 inlet~ audio;
 #N canvas 340 191 450 300 distortion 0;
 #X obj 29 217 outlet~;
@@ -34,12 +32,15 @@
 #X obj 259 160 r \$0-toggle;
 #X obj 348 76 s \$0-in-toggle;
 #X obj 499 51 declare -lib zexy;
-#X connect 0 0 2 0;
-#X connect 0 1 4 1;
-#X connect 0 1 4 0;
-#X connect 3 0 0 0;
-#X connect 4 0 2 0;
-#X connect 5 0 6 0;
-#X connect 6 0 8 0;
-#X connect 7 0 0 0;
+#X obj 245 339 outlet~;
+#X obj 274 296 *~ 0.07;
+#X connect 0 0 9 0;
+#X connect 0 1 3 1;
+#X connect 0 1 3 0;
+#X connect 2 0 0 0;
+#X connect 3 0 10 0;
+#X connect 4 0 5 0;
+#X connect 5 0 7 0;
+#X connect 6 0 0 0;
+#X connect 10 0 9 0;
 #X coords 0 -1 1 1 120 40 1 100 100;
