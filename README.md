@@ -6,7 +6,7 @@ A collection of Pure Data patches.
 
 Add the following externals to pd through the `Help -> Find externals` menu:
 
-``
+```
 zexy
 cyclone
 freeverb~
