@@ -1,4 +1,4 @@
-#N canvas 1012 239 811 667 10;
+#N canvas 869 239 811 667 10;
 #X msg 42 101 resize 100 \, const 0;
 #X obj 471 24 table \$0-table;
 #X obj 480 563 outlet;
@@ -25,7 +25,7 @@
 #X obj 365 363 s \$0-table;
 #X obj 221 312 tabwrite \$0-table;
 #X obj 418 147 tabread \$0-table;
-#X obj 26 45 hsl 136 16 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 26 45 hsl 136 16 0 1 0 0 empty empty empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
 #X connect 0 0 22 0;
 #X connect 3 0 11 0;
 #X connect 4 0 0 0;
