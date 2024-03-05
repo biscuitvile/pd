@@ -22,11 +22,11 @@ sudo reboot
 alsactl --file /usr/share/doc/audioInjector/asound.state.RCA.thru.test restore
 
 
-ssh-keygen -t rsa -b 4096 -C "andy.borsz@gmail.com"
+ssh-keygen -t rsa -b 4096 -C "your-email-here"
 eval "$(ssh-agent -s)"
 
-git config --global user.name "Andy Borsz"
-git config --global user.email "andy.borsz@gmail.com"
+git config --global user.name "Your Name"
+git config --global user.email "your-email-here"
 
 Add ~/.ssh/id_rsa.pub to GitHub account SSH keys
 
