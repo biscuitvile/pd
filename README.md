@@ -4,6 +4,10 @@ A collection of Pure Data patches.
 
 ## Installation
 
+[![Installation](https://img.youtube.com/vi/veiZAdVDrLU/0.jpg)](https://www.youtube.com/watch?v=veiZAdVDrLU)
+
+[![Usage](https://img.youtube.com/vi/PjAbhiXb9HA/0.jpg)](https://www.youtube.com/watch?v=PjAbhiXb9HA)
+
 Add the following externals to pd through the `Help -> Find externals` menu:
 
 ```
