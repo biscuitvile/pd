@@ -11,11 +11,12 @@ A collection of Pure Data patches.
 Add the following externals to pd through the `Help -> Find externals` menu:
 
 ```
-zexy
+abl_link~
 cyclone
 freeverb~
 ggee
 hcs
+zexy
 ```
 
 Add the following to pd path preferences:
