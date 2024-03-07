@@ -2,24 +2,19 @@
 #X msg 42 101 resize 100 \, const 0;
 #X obj 471 24 table \$0-table;
 #X obj 480 563 outlet;
-#X obj 143 22 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 163 22 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
+#X obj 143 22 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 163 22 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
 #X msg 365 340 resize \$1;
 #X obj 211 173 midi-encoder;
 #X obj 326 236 f;
 #X obj 355 236 + 1;
 #X obj 326 214 metro 100;
-#X floatatom 326 265 5 0 0 0 - - -, f 5;
+#X floatatom 326 265 5 0 0 0 - - - 0;
 #X obj 326 186 == 1;
-#X obj 325 159 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 325 159 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X msg 364 311 \$1;
-#X obj 418 175 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 100 1;
-#X obj 368 34 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
+#X obj 418 175 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 368 34 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 368 85 f;
 #X obj 398 85 + 1;
 #X obj 368 -17 == 0;
@@ -34,6 +29,8 @@
 #X obj 211 147 f \$1;
 #X obj 211 122 loadbang;
 #X obj 261 148 f \$2;
+#X obj 20 -11 inlet toggle;
+#X obj 103 -11 inlet clear;
 #X connect 0 0 23 0;
 #X connect 3 0 12 0;
 #X connect 4 0 0 0;
@@ -70,4 +67,6 @@
 #X connect 28 0 27 0;
 #X connect 28 0 29 0;
 #X connect 29 0 6 1;
+#X connect 30 0 3 0;
+#X connect 31 0 4 0;
 #X coords 0 -1 1 1 160 20 1 20 20;
