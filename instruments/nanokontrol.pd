@@ -155,7 +155,7 @@
 #X obj 294 125 +;
 #X obj 359 131 int;
 #X floatatom 355 179 5 0 0 0 - - - 0;
-#X obj 288 242 outlet;
+#X obj 353 376 outlet;
 #X floatatom 116 317 5 0 0 0 - - - 0;
 #X obj 116 235 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 152 271 + 1;
@@ -179,15 +179,16 @@
 #X msg 173 367 ../audio/\$1.wav;
 #X obj 248 39 midi-button 59 1;
 #X obj 327 59 midi-button 58 1;
+#X obj 352 344 l2s;
 #X connect 0 0 2 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X connect 3 0 2 1;
 #X connect 3 0 4 0;
-#X connect 4 0 5 0;
 #X connect 4 0 19 0;
 #X connect 4 0 20 0;
 #X connect 4 0 23 0;
+#X connect 4 0 29 0;
 #X connect 6 0 26 0;
 #X connect 6 0 14 0;
 #X connect 7 0 9 0;
@@ -211,6 +212,7 @@
 #X connect 26 0 10 0;
 #X connect 27 0 0 0;
 #X connect 28 0 1 0;
+#X connect 29 0 5 0;
 #X coords 0 -1 1 1 85 65 1 100 100;
 #X restore 141 -42 pd navigation;
 #X msg 141 31 track-number \$1;
