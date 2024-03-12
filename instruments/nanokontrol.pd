@@ -1,4 +1,4 @@
-#N canvas 388 38 624 621 12;
+#N canvas 588 29 624 621 12;
 #N canvas 413 25 963 997 nanokontrol 0;
 #X obj 110 194 looper~;
 #X obj 37 137 adc~;
@@ -442,4 +442,6 @@
 #X connect 30 0 3 2;
 #X connect 30 0 3 0;
 #X coords 0 -1 1 1 600 600 2 100 100;
-#X restore 8 6 pd nanokontrol;
+#X restore 5 3 pd nanokontrol;
+#X text 411 557 Pure Data is FREE SOFTWARE;
+#X text 250 580 download this patch at: github.com/biscuitvile/pd;
