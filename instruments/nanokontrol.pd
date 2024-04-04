@@ -1,4 +1,4 @@
-#N canvas 588 29 624 621 12;
+#N canvas 584 37 624 621 12;
 #N canvas 413 25 963 997 nanokontrol 0;
 #X obj 110 194 looper~;
 #X obj 37 137 adc~;
@@ -110,6 +110,10 @@
 #X msg 141 328 0;
 #X obj 105 441 nano-led 41;
 #X obj 102 293 sel 0;
+#X obj -11 252 file-exists;
+#X obj -11 280 sel 0;
+#X msg -11 229 ../audio/\$1.wav;
+#X obj -11 202 r BANK;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 1 0 29 0;
@@ -153,6 +157,10 @@
 #X connect 36 0 31 0;
 #X connect 38 0 35 0;
 #X connect 38 1 36 0;
+#X connect 39 0 40 0;
+#X connect 40 0 36 0;
+#X connect 41 0 39 0;
+#X connect 42 0 41 0;
 #X restore 243 51 pd looper-assignments;
 #N canvas 150 175 450 300 reverb-assignments 0;
 #X obj 24 185 outlet;
@@ -229,13 +237,13 @@
 #X connect 2 0 0 0;
 #X connect 3 0 1 0;
 #X restore 418 520 pd volume-assignment;
-#N canvas 471 160 940 688 navigation 0;
+#N canvas 1441 263 940 688 navigation 0;
 #X msg 248 85 1;
 #X msg 327 82 -1;
 #X obj 294 125 +;
 #X obj 359 131 int;
 #X floatatom 355 179 5 0 0 0 - - - 0;
-#X obj 353 376 outlet;
+#X obj 352 376 outlet;
 #X floatatom 116 317 5 0 0 0 - - - 0;
 #X obj 116 235 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 152 271 + 1;
@@ -246,7 +254,7 @@
 #X msg 38 255 1;
 #X obj 31 367 s \$0-initial-bank;
 #X obj 359 108 r \$0-initial-bank;
-#X obj 200 440 delay 100;
+#X obj 205 440 delay 100;
 #X obj 103 128 bng 15 250 50 0 empty empty + 17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 132 128 bng 15 250 50 0 empty empty - 17 7 0 10 #fcfcfc #000000 #000000;
 #X floatatom 159 127 5 0 0 0 - - - 0;
@@ -260,6 +268,7 @@
 #X obj 248 39 midi-button 59 1;
 #X obj 327 59 midi-button 58 1;
 #X obj 352 344 l2s;
+#X obj 274 234 s BANK;
 #X connect 0 0 2 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
@@ -269,6 +278,7 @@
 #X connect 4 0 20 0;
 #X connect 4 0 23 0;
 #X connect 4 0 29 0;
+#X connect 4 0 30 0;
 #X connect 6 0 26 0;
 #X connect 6 0 14 0;
 #X connect 7 0 9 0;
