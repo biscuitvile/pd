@@ -12,6 +12,8 @@
 #X obj 411 24 channel-change 3;
 #X msg 520 51 clear 1;
 #X obj 211 315 outlet;
+#X obj 393 271 loadbang;
+#X msg 393 295 monitor 1;
 #X connect 0 0 8 0;
 #X connect 1 0 0 0;
 #X connect 1 2 2 0;
@@ -22,6 +24,8 @@
 #X connect 5 0 8 0;
 #X connect 6 2 7 0;
 #X connect 7 0 8 0;
+#X connect 9 0 10 0;
+#X connect 10 0 8 0;
 #X restore 386 164 pd looper-assignments;
 #X obj 260 182 looper~;
 #X obj 261 973 channel-out~;
@@ -509,6 +513,8 @@
 #X obj 388 197 channel-change 24;
 #X msg 369 79 channel 1;
 #X msg 632 257 channel 1;
+#X obj 113 202 loadbang;
+#X msg 113 226 volume 0.75;
 #X connect 0 0 4 0;
 #X connect 1 0 19 0;
 #X connect 2 0 4 0;
@@ -535,6 +541,8 @@
 #X connect 18 2 14 0;
 #X connect 19 0 4 0;
 #X connect 20 0 13 0;
+#X connect 21 0 22 0;
+#X connect 22 0 7 0;
 #X restore 411 955 pd volume-assignments;
 #X connect 2 0 1 0;
 #X connect 3 0 4 1;
