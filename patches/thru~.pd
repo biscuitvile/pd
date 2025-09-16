@@ -1,0 +1,9 @@
+#N canvas 309 25 482 465 12;
+#X obj 83 212 channel-out~;
+#X obj 83 155 cosine-pan~;
+#X obj 83 116 adc~ 1 \, 3;
+#X connect 1 0 0 0;
+#X connect 1 1 0 2;
+#X connect 2 0 1 0;
+#X connect 2 1 1 0;
+#X connect 2 2 1 0;
