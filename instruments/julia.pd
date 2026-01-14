@@ -2896,7 +2896,7 @@
 #X connect 294 0 295 0;
 #X connect 295 0 293 1;
 #X connect 296 0 66 0;
-#X connect 296 1 66 2;
+#X connect 296 0 66 2;
 #X connect 297 0 298 0;
 #X connect 298 0 296 1;
 #X connect 299 0 0 0;
